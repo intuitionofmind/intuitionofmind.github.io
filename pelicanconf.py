@@ -21,7 +21,7 @@ DEFAULT_LANG = 'en'
 USE_FOLDER_AS_CATEGORY = True
 LOAD_CONTENT_CACHE = False
 
-THEME = '/Users/wayne/Documents/mySite/pelican-themes/foundation-default-colours'
+THEME = 'pelican-themes/foundation-default-colours'
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -32,7 +32,7 @@ AUTHOR_FEED_RSS = None
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 
 # plugins
-PLUGIN_PATHS = ['/Users/wayne/Documents/mySite/pelican-plugins']
+PLUGIN_PATHS = ['pelican-plugins/']
 PLUGINS = ['render_math', 'tag_cloud']
 
 TAG_CLOUD_SORTING = 'random'
