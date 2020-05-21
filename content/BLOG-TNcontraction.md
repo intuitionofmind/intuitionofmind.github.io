@@ -42,7 +42,7 @@ $\gamma_{0}=1$ denotes a virtual bond.
 
 One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
 
-<p><img alt="" src="/images/tn_mpo_expection_value.png" width="400"></p>
+<p><img alt="" src="/images/tn_mpo_expection_value.png"></p>
 
 <p style="text-align:center"><img alt="" src="/images/tn_mpo_expection_value.png" width="400"></p>
 <p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p>
