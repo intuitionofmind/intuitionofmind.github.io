@@ -41,12 +41,9 @@ H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^
 $\gamma_{0}=1$ denotes a virtual bond.
 
 One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
-<figure>
-    <center>
-    <img src='imag_tn_contraction/tn_mpo_expection_value.png' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p></figcaption>
-    </center>
-</figure>
+
+<p style="text-align:center"><img src="imag_tn_contraction/tn_mpo_expection_value.png" width="400"></p>
+<p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p>
 
 #  How to practically contract a TN
 
@@ -102,18 +99,12 @@ With relatively small $\chi$, CUDA-OE is even slower than OE, while not too much
 It reaches the threshold at about $\chi\simeq 250$, below which we think that the cores in GPU are not fully implemented.
 Overall, if we use `opt_einsum` combined with `CUDA`, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive `tensordot`.
 
-<figure>
-    <center>
-    <img src='imag_tn_contraction/time_nm_oe.pdf' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p></figcaption>
-    </center>
-</figure>
+<p style="text-align:center"><img src="images/tn_contraction/time_nm_oe.pdf" width="500"/></p>
+<p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p>
 
-<figure>
-    <center>
-    <img src='imag_tn_contraction/time_cuda.pdf' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p></figcaption>
-    </center>
-</figure>
+<p style="text-align:center"><img src="images/tn_contraction/time_cuda.pdf" width="500"/></p>
+<p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p>
+
+The original notebook and code can be found [here](https://gitlab.com/waynezheng/test_mps-mpo_contraction).
 
 [^opt_sum]: [Smith et al., (2018). opt_einsum - A Python package for optimizing contraction order for einsum-like expressions . Journal of Open Source Software, 3(26), 753.](https://joss.theoj.org/papers/10.21105/joss.00753)

@@ -225,13 +225,11 @@ The basic idea of MPO is to introduce more inner bonds to decouple the operation
 H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
 \end{equation}
 $\gamma_{0}=1$ denotes a virtual bond.</p>
-<p>One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
-<figure>
-    <center>
-    <img src='imag_tn_contraction/tn_mpo_expection_value.png' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p></figcaption>
-    </center>
-</figure></p>
+<p>One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as </p>
+<p style="text-align:center"><img src="imag_tn_contraction/tn_mpo_expection_value.png" width="400"></p>
+
+<p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p>
+
 <h1>How to practically contract a TN</h1>
 <h2>An example</h2>
 <p>Here we consider a TN $\langle\psi|H|\psi\rangle$ as an example, in which $H$ is chosen to be the XYZ-model
@@ -288,20 +286,15 @@ It reaches the threshold at about $\chi\simeq 250$, below which we think that th
 Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive <code>tensordot</code>.</p>
 </li>
 </ul>
-<figure>
-    <center>
-    <img src='imag_tn_contraction/time_nm_oe.pdf' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p></figcaption>
-    </center>
-</figure>
+<p style="text-align:center"><img src="images/tn_contraction/time_nm_oe.pdf" width="500"/></p>
 
-<figure>
-    <center>
-    <img src='imag_tn_contraction/time_cuda.pdf' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p></figcaption>
-    </center>
-</figure>
+<p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p>
 
+<p style="text-align:center"><img src="images/tn_contraction/time_cuda.pdf" width="500"/></p>
+
+<p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p>
+
+<p>The original notebook and code can be found <a href="https://gitlab.com/waynezheng/test_mps-mpo_contraction">here</a>.</p>
 <div class="footnote">
 <hr>
 <ol>
@@ -340,12 +333,12 @@ Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we c
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
 									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
-									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
 									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
+									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 								</ul>
 							</div>
 
