@@ -1,6 +1,46 @@
 <!doctype html>
 <html class="no-js" lang="en">
-	<head>
+	  <head>
+    <!-- Using MathJax, with the delimiters $ -->
+    <!-- Conflict with pygments for the .mo and .mi -->
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi --> 
+    <style type="text/css">
+        head {
+            font-size: 20px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [ ["$$","$$"] ],
+                processEnvironments: true,
+                processEscapes: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,24 +58,46 @@
 		<!-- Feeds -->
 
 <script>var _gaq=[['_setAccount','UA-91674826-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-
-		<!-- mathjax config similar to math.stackexchange -->
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$', '$'] ],
-				displayMath: [ ['$$', '$$']],
-				processEscapes: true,
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-			},
-			messageStyle: "none",
-			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-		});
-		</script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 	</head>
+
 	<body>
+    <style type="text/css">
+        head {
+            font-size: 20px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [ ["$$","$$"] ],
+                processEnvironments: true,
+                processEscapes: true,
+                processRefs: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -59,6 +121,7 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li class="active"><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+							<li ><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/intuitionofmind">Github</a></li>
@@ -66,6 +129,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 									<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 									<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
 									<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>
@@ -98,6 +162,7 @@
                                                                                              
 
 								<li class="active"><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+								<li ><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
                              <!--                                                                                                            -->
@@ -115,16 +180,27 @@
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
 <article>
-	<h2>张礼先生</h2>
+    <style type="text/css">
+        h2 {
+            margin-left: 10px;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+    </style>
+
+    <head, style='font-size: 28px; font-weight: bold; color: #008cba;'>
+    张礼先生
+    </head, /style>
+	<hr/>
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Fri 20 September 2013. Tags: <a href="/tag/essay.html">essay</a>, </h6>
 	<p>徐湛和张礼两位先生因为在非阿贝尔规范场中一个被广泛引用的计算技巧的原创性贡献而获得本届周培源奖，三两个月前就已经见诸报端，但直到不久前在厦门召开中国物理学秋季会议之时才正式授奖。大约是因为携带不便，奖杯是由中国物理学会的工作人员带回北京的。因为这学期我是徐湛先生的费曼物理学课程助教，前两天偶然的机会被拜托去了一趟物理所取回二老的奖杯。奖杯是周培源先生的半身铜像，果然很有些分量，装在绸缎衬里的红色大盒中，出门时太过于显眼以至于还被保安盘问了半天。</p>
 <p>回到高等研究院已经是下午晚些时候了，徐湛先生的办公室在二楼，他顺便打电话给张礼先生以确认他是否在办公室。恰巧在，张先生的办公室就在三楼，而我的办公室在四楼，顺道就把张礼先生的奖杯给拿上去了。其实我与张先生已经有过一面之缘，这学期我选了他的关于量子力学前沿课题的课程，而第一节课在中秋假期之前已经上过了。那天阴天，张先生的屋里却没有开灯，显得很昏暗，几句客套之后，我转身打算离开。这时张先生似乎有些局促，逆着窗外的光线看不大清楚。“我有个不情之请，能不能麻烦你帮我一下？”原来是张先生的电脑上不去网了而且收发邮件的Outlook打开超链接有问题。简单几句了解到，原来张先生一直使用固定的IP地址，但是当天被他的学生改成了自动获取IP地址。高等研究院各方面条件都非常好，唯独网络问题一直被广为诟病，特别是有线网络常常无法自动获取有效的IP地址，迫使我们日常使用的台式电脑都在使用无线网络。但是固定IP就没有问题了，于是乎就照着改回固定IP就好了。我常年使用Linux系统，对Windows的各种设置不是太熟悉，加上更新Office到2013版本，花了稍长的时间。</p>
 <p>先生已经是耄耋之年，却硬要让我坐着他的大椅子，言辞坚决不容推辞，他自己另外搬了一个小的坐在一旁看，期间不时向我搭话，问我软件装完为什么要重启？其实我也不是很清楚，只是很模糊地随便说了说蒙混过关；还谈及就是在这台计算机上他自己亲手排版的他那本著名专著《量子力学前沿问题》，言辞之间似乎颇为得意，说起 Latex，他说徐湛老师教过他用，但是他觉得麻烦一段时间不用已经忘记了。真正的为师者总是不忘随时传道，先生意味深长地告诫我要在学术上好好发展；说起他自己最好的年华耽误在了文革中，我回头分明看到先生满脸的惆怅和落寞，就像昨天的憾事一般。</p>
 <p>张先生的计算机是很老的那种，屏幕很小，据说是从某个中科院的老师那里淘汰后继承来的，查看处理器竟然还是奔腾系列，就该知道这是何等古物了吧！我说张老师您或许该换一个计算机，特别是换个大一点的屏幕，您岁数大了看着还方便。“我才不换，这个用着挺好，我的眼睛没问题，有老师早就提过，我没有同意，那样做太浪费了！”张先生说的非常用力，一边说，一边挥手，头还向胸口深深地垂了下去，就像刚才让我坐他的大椅子一样，非常坚决，不容反驳。“不过要是谁淘汰下来一个，那我可是要的。”张先生又意外地补充道，说完竟然像个孩子一样咯咯地笑了起来，我回头发现先生的脸上完全没有了刚才的那种惆怅和落寞，就像北京的秋天一样美丽而平静。完事之后我回到办公室，不一会儿，张先生竟亲自然跑到楼上我办公室来，原来自己丢三落四的毛病到哪都改不了，才发现自己的东西落在张先生的办公室了却一直都没觉察。谢过先生，送先生出门。高等研究院坐落在科学馆，是清华大学的早期文物级建筑，楼梯很陡，虽然只有一层楼，但我还是让先生坐电梯下去，先生毕竟岁数大了。</p>
 <p>张礼先生出生于上世纪二十年代，一生几乎跨越了中国这个最动荡的百年，想必多有波折，但是作为学者师者，却依然不忘初心，学问风度都让我等后辈仰之弥高。先生之风，山高水长，愿张礼先生一直健康如意。</p>
 <p>二零一三年九月二十日记于清华园</p>
-	<hr/>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Fri 20 September 2013. Tags: <a href="/tag/essay.html">essay</a>, </h6>
-</article>
+</article, /style>
 
 <hr/>
 						</div>
@@ -153,18 +229,20 @@
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
 									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
 									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
-									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
+											<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 											<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 											<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
 											<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>

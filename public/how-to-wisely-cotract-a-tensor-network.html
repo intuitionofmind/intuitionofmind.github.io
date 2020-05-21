@@ -1,46 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
-	  <head>
-    <!-- Using MathJax, with the delimiters $ -->
-    <!-- Conflict with pygments for the .mo and .mi -->
-<!-- Using MathJax, with the delimiters $ -->
-<!-- Conflict with pygments for the .mo and .mi --> 
-    <style type="text/css">
-        head {
-            font-size: 20px;
-        }
-        body {
-            font-size: 12px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: bold;
-            color: #008cba;
-        }
-        h2 {
-            font-size: 22px;
-            font-weight: bold;
-            color: #008cba;
-        }
-        h3 {
-            font-size: 18px;
-            font-weight: bold;
-            color: #008cba;
-        }
-    </style>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [ ["$$","$$"] ],
-                processEnvironments: true,
-                processEscapes: true,
-                tags: 'ams'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
+	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -58,46 +18,24 @@
 		<!-- Feeds -->
 
 <script>var _gaq=[['_setAccount','UA-91674826-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 	</head>
-
 	<body>
-    <style type="text/css">
-        head {
-            font-size: 20px;
-        }
-        body {
-            font-size: 12px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: bold;
-            color: #008cba;
-        }
-        h2 {
-            font-size: 22px;
-            font-weight: bold;
-            color: #008cba;
-        }
-        h3 {
-            font-size: 18px;
-            font-weight: bold;
-            color: #008cba;
-        }
-    </style>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [ ["$$","$$"] ],
-                processEnvironments: true,
-                processEscapes: true,
-                processRefs: true,
-                tags: 'ams'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -121,7 +59,7 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
-							<li ><a href="/category/physics.html">PHYSICS</a></li>
+							<li class="active"><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/intuitionofmind">Github</a></li>
@@ -129,7 +67,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
+									<li><a href="/posts/2020/10/index.html">October 2020 (1)</a></li>
 									<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 									<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
 									<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>
@@ -162,7 +100,7 @@
                                                                                              
 
 								<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
-								<li ><a href="/category/physics.html">PHYSICS</a></li>
+								<li class="active"><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
                              <!--                                                                                                            -->
@@ -179,15 +117,95 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-	<ul>
-		<li><a href="/tag/tensor-network.html">tensor network</a></li>
-		<li><a href="/tag/essay.html">essay</a></li>
-		<li><a href="/tag/cycling.html">cycling</a></li>
-		<li><a href="/tag/training.html">training</a></li>
-		<li><a href="/tag/science.html">science</a></li>
-		<li><a href="/tag/philosophy.html">philosophy</a></li>
-		<li><a href="/tag/literature.html">literature</a></li>
-	</ul>
+<article>
+	<h2>How to wisely cotract a tensor network</h2>
+	<p>How to contract a tensor network</p>
+<h1>Introduction</h1>
+<h2>Tensors and their contraction</h2>
+<p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as <span class="math">\(M_{ij}\)</span>.
+For example, a four-dimensional tensor can be obtained by the tensor product of two matrices:
+</p>
+<div class="math">\begin{equation}
+\left(A\otimes B\right)_{ij}=C_{ij}=C_{k\cdot d_{l}+l, m\cdot d_{n}+n}=A_{km}\cdot B_{ln}\equiv T_{mn}^{kl},
+\end{equation}</div>
+<p>
+where <span class="math">\(d_{l, n}\)</span> are the dimenions of the coresponding indices.
+Each index of a tensor is called a <em>bond</em>.
+Any element in a tensor <span class="math">\(T\)</span> can be mapped to a one-dimensional vector <span class="math">\(v(p)\)</span> through <span class="math">\(p=k\cdot\left(d_{l}d_{m}d_{n}\right)+l\cdot\left(d_{m}d_{n}\right)+m\cdot d_{n}+n\)</span>, which is the actual layout if you store a tensor in a computer's memory. </p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cupy</span> <span class="kn">as</span> <span class="nn">cp</span>
+</pre></div>
+
+
+<h2>Matrix product state and matrix product operator</h2>
+<p>A one-dimensional (1D) quantum state can be written as a matrix product state (MPS):</p>
+<div class="math">$$|\psi\rangle$$</div>
+<p>Firstly I should point out the so-called  and matrix product operator (MPO) are actually comprised of tensors rather than matrices. This is a historical issue.</p>
+<h1>How to contract a TN</h1>
+<h3>The simplest way</h3>
+<p>It is natural </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+	<hr/>
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Fri 09 October 2020. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
@@ -214,20 +232,20 @@
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
-									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
-									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
 									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
+									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
 									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
+											<li><a href="/posts/2020/10/index.html">October 2020 (1)</a></li>
 											<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 											<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
 											<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>

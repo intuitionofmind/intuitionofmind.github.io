@@ -1,6 +1,46 @@
 <!doctype html>
 <html class="no-js" lang="en">
-	<head>
+	  <head>
+    <!-- Using MathJax, with the delimiters $ -->
+    <!-- Conflict with pygments for the .mo and .mi -->
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi --> 
+    <style type="text/css">
+        head {
+            font-size: 20px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [ ["$$","$$"] ],
+                processEnvironments: true,
+                processEscapes: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,24 +58,46 @@
 		<!-- Feeds -->
 
 <script>var _gaq=[['_setAccount','UA-91674826-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-
-		<!-- mathjax config similar to math.stackexchange -->
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$', '$'] ],
-				displayMath: [ ['$$', '$$']],
-				processEscapes: true,
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-			},
-			messageStyle: "none",
-			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-		});
-		</script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 	</head>
+
 	<body>
+    <style type="text/css">
+        head {
+            font-size: 20px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [ ["$$","$$"] ],
+                processEnvironments: true,
+                processEscapes: true,
+                processRefs: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -59,6 +121,7 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li class="active"><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+							<li ><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/intuitionofmind">Github</a></li>
@@ -98,6 +161,7 @@
                                                                                              
 
 								<li class="active"><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+								<li ><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
                              <!--                                                                                                            -->
@@ -189,12 +253,13 @@
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
 									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
 									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
-									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
 								</ul>
 							</div>
 

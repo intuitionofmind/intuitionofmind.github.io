@@ -32,8 +32,8 @@ AUTHOR_FEED_RSS = None
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 
 # plugins
-PLUGIN_PATHS = ['pelican-plugins/']
-PLUGINS = ['render_math', 'tag_cloud']
+PLUGIN_PATHS = ['./pelican-plugins/']
+PLUGINS = ['tag_cloud']
 
 TAG_CLOUD_SORTING = 'random'
 TAG_CLOUD_BADGE = True

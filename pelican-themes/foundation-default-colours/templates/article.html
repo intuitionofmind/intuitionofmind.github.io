@@ -2,11 +2,22 @@
 
 {% block content %}
 <article>
-	<h2>{{ article.title }}</h2>
-	{{ article.content }}
+    <style type="text/css">
+        h2 {
+            margin-left: 10px;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+    </style>
+
+    <head, style='font-size: 28px; font-weight: bold; color: #008cba;'>
+    {{ article.title }}
+    </head, /style>
 	<hr/>
 	<h6>Written by <a href="{{ SITEURL }}/author/{{ article.author|lower|replace(' ', '-') }}.html">{{ article.author }}</a> {% if article.category %}in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category}}</a> {% endif %}on {{ article.locale_date }}.{% if article.tags|count > 0 %} Tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>, {% endfor %}{% endif %}</h6>
-</article>
+	{{ article.content }}
+</article, /style>
 
 <hr/>
 {% if DISQUS_SITENAME %}

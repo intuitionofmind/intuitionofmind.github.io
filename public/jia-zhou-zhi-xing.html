@@ -1,6 +1,46 @@
 <!doctype html>
 <html class="no-js" lang="en">
-	<head>
+	  <head>
+    <!-- Using MathJax, with the delimiters $ -->
+    <!-- Conflict with pygments for the .mo and .mi -->
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi --> 
+    <style type="text/css">
+        head {
+            font-size: 20px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [ ["$$","$$"] ],
+                processEnvironments: true,
+                processEscapes: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,24 +58,46 @@
 		<!-- Feeds -->
 
 <script>var _gaq=[['_setAccount','UA-91674826-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-
-		<!-- mathjax config similar to math.stackexchange -->
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$', '$'] ],
-				displayMath: [ ['$$', '$$']],
-				processEscapes: true,
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-			},
-			messageStyle: "none",
-			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-		});
-		</script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 	</head>
+
 	<body>
+    <style type="text/css">
+        head {
+            font-size: 20px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [ ["$$","$$"] ],
+                processEnvironments: true,
+                processEscapes: true,
+                processRefs: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -59,6 +121,7 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li class="active"><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+							<li ><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/intuitionofmind">Github</a></li>
@@ -66,6 +129,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 									<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 									<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
 									<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>
@@ -98,6 +162,7 @@
                                                                                              
 
 								<li class="active"><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+								<li ><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
                              <!--                                                                                                            -->
@@ -115,7 +180,20 @@
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
 <article>
-	<h2>加州之行</h2>
+    <style type="text/css">
+        h2 {
+            margin-left: 10px;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+    </style>
+
+    <head, style='font-size: 28px; font-weight: bold; color: #008cba;'>
+    加州之行
+    </head, /style>
+	<hr/>
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Thu 28 November 2019. Tags: <a href="/tag/essay.html">essay</a>, </h6>
 	<p>加州的阳光刺眼而奇特，一步之间只要迈进阴影里就会立马感到一阵凉意。黄昏时分坐大巴从LAX出来在高速上堵车几近两个小时，天上不时有直升飞机盘旋，第二天才知道最近天干物燥，加州各处森林不断失火，灭火的飞机也是忙个不停。</p>
 <p>这是我这一年中第二次来到加州访问盛老师了。盛老师说话轻声细语，走路也几乎没有任何声音，言辞之间总是不时提起她的女儿，脸上洋溢着笑容，看的出来她是很爱她的女儿而且对她的女儿感到自豪的，但不时间也有些许小小的抱怨：她的女儿总是忙自己的事情而没有太多时间陪她在一起。盛老师总是乐观的，在我呆的期间，她的眼睛突然有点问题，去了医院检查似乎医生也没有什么太多办法，头一两天看得出来她似乎有点失落，但是过了两天她很快就向积极的一面转变了，庆幸问题不大，习惯了觉得也不是特别大的影响。</p>
 <p>盛老师是计算物理方面的顶级专家，更可贵的是她的物理同样非常好，对物理问题总是有非常准确的理解和把握。她是一位一流的物理学家。</p>
@@ -123,9 +201,7 @@
 <p>“我那时候之前做的东西都很土”，盛老师是这么一个让我一下子笑出声的字眼形容她在来加州之前所做的研究，“做强关联可以学到很多东西，所以我真正的起步有点晚，但是没关系，有兴趣能一直做下去就很好了。“在这一个很长的过程中保持兴趣很重要，盛老师也告诉我也不能用力过猛，如果一段时间工作太辛苦导致失去了兴趣，那就是非常不好的事情了。跟随盛老师可以学习到很多东西，甚至不仅仅是技术和物理，她对年轻人的关心和鼓励都让我感到信心。CSUN是一所教学型的加州大学，没有博士学位授予点，所以盛老师没有带过博士生，但是她培养出了很多优秀的博士后，在很多很好的学校找到工作。</p>
 <p>在加州度过了紧张而收获满满的一个月后，赶在感恩节以前我直接飞往了费城，在凄风冷雨中艰难地跑完了费城马拉松。虽然其名气在外，组织和体验却并不是很好。倒是费城艺术博物馆让人很是惊艳，观览了从中世纪到文艺复兴再到浪漫主义甚至是很多东方的艺术作品。特别是西方的油画是需要现场光观看的，因为油画实际上是三维的，颜料的堆叠还会造成第三个维度，而照片无论分辨率多高都无法重现画作本来真实的面貌。在费城艺术博物馆，我尤其喜欢的是莫奈的多幅作品，莫奈高寿，产量极高，他喜欢表达自然风光，清晨中的田园、暮色中的树林，色彩清亮明快，只有意向和形状而没有轮廓，给人一种恬静和平和的感觉。</p>
 <p>2019.11.28于哥伦布</p>
-	<hr/>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Thu 28 November 2019. Tags: <a href="/tag/essay.html">essay</a>, </h6>
-</article>
+</article, /style>
 
 <hr/>
 						</div>
@@ -154,18 +230,20 @@
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
 									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
 									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
-									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
+											<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 											<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 											<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
 											<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>
