@@ -193,7 +193,7 @@
     How to wisely contract a tensor network
     </head, /style>
 	<hr/>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Fri 15 May 2020. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Thu 21 May 2020. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
 	<h1>Introduction</h1>
 <h2>Tensors and their contraction</h2>
 <p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as $M_{ij}$.
@@ -218,18 +218,18 @@ $$
 |\psi\rangle=\sum_{{j}}\left(A^{j_{0}}\cdots A^{j_{N-1}}\right)|j_{0}\cdots j_{N-1}\rangle.
 \end{equation}
 $$
-$A$ has alreadly been chosen to be <em>left-canonical</em>, namley $\sum_{j}A^{j\dagger}A^{j}=1$.
+$A$ has already been chosen to be <em>left-canonical</em>, namely $\sum_{j}A^{j\dagger}A^{j}=1$.
 The basic idea of MPO is to introduce more inner bonds to decouple the operation of a many-body operator with finite range interactions into the production of local onsite tensors.</p>
 <p>A matrix product operator (MPO) looks like
 \begin{equation}
 H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
 \end{equation}
 $\gamma_{0}=1$ denotes a virtual bond.</p>
-<p>One of the simplest physical TN is to compute the expection vaule of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed 
+<p>One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
 <figure>
     <center>
-    <img src='images/tn_contraction/tn_mpo_expection_value.png' width='500'/>
-    <figcaption>Figure 1. TN representation for $\langle\psi|H|\psi\rangle.$</figcaption>
+    <img src='imag_tn_contraction/tn_mpo_expection_value.png' width='500'/>
+    <figcaption><p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p></figcaption>
     </center>
 </figure></p>
 <h1>How to practically contract a TN</h1>
@@ -275,8 +275,7 @@ This method will be particularly useful to contracting a two-dimensional TN.</p>
 <h2>Numerical results</h2>
 <p>Platform: <strong>Intel(R) Xeon(R) CPU E5-2640, NVIDIA Tesla P100, CUDA 9.2.88</strong>.
 The XYZ-Hamiltonian is chosen as $J_{x}=J_{y}=1.0, J_{z}=h=0.5$.
-The MPS is generated randomly.
-To reduce the time fluctuations, in each individual test we repeat the contraction for $10$ times.</p>
+The MPS is generated randomly.</p>
 <p>We conclude that:</p>
 <ul>
 <li>
@@ -290,19 +289,16 @@ Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we c
 </li>
 </ul>
 <figure>
- .caption p {
-font-size: 100px;
-}
     <center>
-    <img src='images/tn_contraction/time_nm_oe.pdf' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">Figure. Time </p></figcaption>
+    <img src='imag_tn_contraction/time_nm_oe.pdf' width='500'/>
+    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p></figcaption>
     </center>
 </figure>
 
 <figure>
     <center>
-    <img src='images/tn_contraction/time_cuda.pdf' width='500'/>
-    <figcaption>Figure. Time </figcaption>
+    <img src='imag_tn_contraction/time_cuda.pdf' width='500'/>
+    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p></figcaption>
     </center>
 </figure>
 
@@ -344,12 +340,12 @@ font-size: 100px;
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
 									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
-									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
-									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
 									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
 									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
+									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
 								</ul>
 							</div>
 

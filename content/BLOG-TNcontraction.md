@@ -1,8 +1,7 @@
 title: How to wisely contract a tensor network
-date: 2020-05-15
+date: 2020-05-21
 tags: tensor network
 category: PHYSICS
-number-sections: true
 
 # Introduction
 
@@ -32,7 +31,7 @@ $$
 |\psi\rangle=\sum_{\{j\}}\left(A^{j_{0}}\cdots A^{j_{N-1}}\right)|j_{0}\cdots j_{N-1}\rangle.
 \end{equation}
 $$
-$A$ has alreadly been chosen to be *left-canonical*, namley $\sum_{j}A^{j\dagger}A^{j}=1$.
+$A$ has already been chosen to be *left-canonical*, namely $\sum_{j}A^{j\dagger}A^{j}=1$.
 The basic idea of MPO is to introduce more inner bonds to decouple the operation of a many-body operator with finite range interactions into the production of local onsite tensors.
 
 A matrix product operator (MPO) looks like
@@ -41,11 +40,11 @@ H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^
 \end{equation}
 $\gamma_{0}=1$ denotes a virtual bond.
 
-One of the simplest physical TN is to compute the expection vaule of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed 
+One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
 <figure>
     <center>
-    <img src='images/tn_contraction/tn_mpo_expection_value.png' width='500'/>
-    <figcaption>Figure 1. TN representation for $\langle\psi|H|\psi\rangle.$</figcaption>
+    <img src='imag_tn_contraction/tn_mpo_expection_value.png' width='500'/>
+    <figcaption><p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p></figcaption>
     </center>
 </figure>
 
@@ -93,7 +92,6 @@ This method will be particularly useful to contracting a two-dimensional TN.
 Platform: **Intel(R) Xeon(R) CPU E5-2640, NVIDIA Tesla P100, CUDA 9.2.88**.
 The XYZ-Hamiltonian is chosen as $J_{x}=J_{y}=1.0, J_{z}=h=0.5$.
 The MPS is generated randomly.
-To reduce the time fluctuations, in each individual test we repeat the contraction for $10$ times.
 
 We conclude that:
 
@@ -105,19 +103,16 @@ It reaches the threshold at about $\chi\simeq 250$, below which we think that th
 Overall, if we use `opt_einsum` combined with `CUDA`, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive `tensordot`.
 
 <figure>
- .caption p {
-font-size: 100px;
-}
     <center>
-    <img src='images/tn_contraction/time_nm_oe.pdf' width='500'/>
-    <figcaption><p style="font-size:16px; text-align:center">Figure. Time </p></figcaption>
+    <img src='imag_tn_contraction/time_nm_oe.pdf' width='500'/>
+    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p></figcaption>
     </center>
 </figure>
 
 <figure>
     <center>
-    <img src='images/tn_contraction/time_cuda.pdf' width='500'/>
-    <figcaption>Figure. Time </figcaption>
+    <img src='imag_tn_contraction/time_cuda.pdf' width='500'/>
+    <figcaption><p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p></figcaption>
     </center>
 </figure>
 
