@@ -43,8 +43,12 @@ $\gamma_{0}=1$ denotes a virtual bond.
 
 One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
 
-<p style="text-align:center"><img alt="" src="/images/tn_contraction/tn_mpo_expectation_value.png" width="400"></p>
-<p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p>
+<center>
+<div class="image" style="display:table;">
+    <img src="/images/tn_contraction/tn_mpo_expectation_value.png" width="400"/>
+    <div style="display:table-caption; caption-side:bottom; font-size:16px;">TN representation for $\langle\psi|H|\psi\rangle$.</div>
+</div>
+</center>
 
 #  How to practically contract a TN
 
@@ -100,11 +104,19 @@ With relatively small $\chi$, CUDA-OE is even slower than OE, while not too much
 It reaches the threshold at about $\chi\simeq 250$, below which we think that the cores in GPU are not fully implemented.
 Overall, if we use `opt_einsum` combined with `CUDA`, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive `tensordot`.
 
-<p style="text-align:center"><img src="/images/tn_contraction/time_nm_oe.png" width="400"/></p>
-<p style="font-size:16px; text-align:center">Time for contracting a TN in terms of NM, OE and CUDA-OE.</p>
+<center>
+<div class="image" style="display:table;">
+    <img src="/images/tn_contraction/time_nm_oe.png" width="400"/>
+    <div style="display:table-caption; caption-side:bottom; font-size:16px;">Time for contracting a TN in terms of NM, OE and CUDA-OE.</div>
+</div>
+</center>
 
-<p style="text-align:center"><img src="/images/tn_contraction/time_cuda.png" width="400"/></p>
-<p style="font-size:16px; text-align:center">Time for contracting a TN in terms of OE and CUDA-OE.</p>
+<center>
+<div class="image" style="display:table;">
+    <img src="/images/tn_contraction/time_cuda.png" width="400"/>
+    <div style="display:table-caption; caption-side:bottom; font-size:16px;">Time for contracting a TN in terms of OE and CUDA-OE.</div>
+</div>
+</center>
 
 The original notebook and code can be found [here](https://gitlab.com/waynezheng/test_mps-mpo_contraction).
 
