@@ -42,8 +42,6 @@ $\gamma_{0}=1$ denotes a virtual bond.
 
 One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
 
-![]({attach}/images/tn_contraction/tn_mpo_expectation_value.png)
-
 <p style="text-align:center"><img alt="" src="/images/tn_contraction/tn_mpo_expectation_value.png" width="400"></p>
 <p style="font-size:16px; text-align:center">TN representation for $\langle\psi|H|\psi\rangle$.</p>
 
@@ -100,8 +98,6 @@ With relatively small $\chi$, CUDA-OE is even slower than OE, while not too much
 - `CUDA` can further speed up about as many as $10^{2}$ times.
 It reaches the threshold at about $\chi\simeq 250$, below which we think that the cores in GPU are not fully implemented.
 Overall, if we use `opt_einsum` combined with `CUDA`, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive `tensordot`.
-
-![]({filename}/images/tn_contraction/time_cuda.pdf)
 
 <p style="text-align:center"><img src="/images/tn_contraction/time_nm_oe.pdf" width="500"/></p>
 <p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p>
