@@ -100,11 +100,11 @@ With relatively small $\chi$, CUDA-OE is even slower than OE, while not too much
 It reaches the threshold at about $\chi\simeq 250$, below which we think that the cores in GPU are not fully implemented.
 Overall, if we use `opt_einsum` combined with `CUDA`, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive `tensordot`.
 
-<p style="text-align:center"><img src="/images/tn_contraction/time_nm_oe.pdf" width="500"/></p>
-<p style="font-size:16px; text-align:center">Time for contracting a TN with $L=32$.</p>
+<p style="text-align:center"><img src="/images/tn_contraction/time_nm_oe.png" width="400"/></p>
+<p style="font-size:16px; text-align:center">Time for contracting a TN in terms of NM, OE and CUDA-OE.</p>
 
-<p style="text-align:center"><img src="/images/tn_contraction/time_cuda.pdf" width="500"/></p>
-<p style="font-size:16px; text-align:center">Time for contracting a TN with $L=128$.</p>
+<p style="text-align:center"><img src="/images/tn_contraction/time_cuda.png" width="400"/></p>
+<p style="font-size:16px; text-align:center">Time for contracting a TN in terms of OE and CUDA-OE.</p>
 
 The original notebook and code can be found [here](https://gitlab.com/waynezheng/test_mps-mpo_contraction).
 
