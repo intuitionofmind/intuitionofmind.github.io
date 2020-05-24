@@ -1,5 +1,6 @@
 title: How to wisely contract a tensor network
 date: 2020-05-21
+modified: 2020-05-23
 tags: tensor network
 category: PHYSICS
 
@@ -14,10 +15,10 @@ Any element in a rank-$D$ tensor $T_{n_{0}, n_{1}, \cdots, n_{D-1}}$ can be mapp
 Generally there are two ways to do this.
 
 - *Row-major*. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=k+1}^{D-1}d_{l}\right)$. The elements along the last index are contiguous. It is implemented in `numpy` as default.
--  *Column-major*. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=0}^{k-1}d_{l}\right)$. The elements along the first index are contiguous. It is implement in Fortran and `Eigen::Tensor<>` (C++) as default.
+-  *Column-major*. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=0}^{k-1}d_{l}\right)$. The elements along the first index are contiguous. It is implemented in Fortran and `Eigen::Tensor<>` (C++) as default.
 
-Two different tensors can be contracted if two they share a same dimension.
-It is the generalization of the matrix production like $C_{ij}=\sum_{k}A_{ik}B_{kj}$.
+Two different tensors can be contracted if they share a same dimension.
+It is a generalization of the matrix production like $C_{ij}=\sum_{k}A_{ik}B_{kj}$.
 Graphically, we use a connected link to denote the connection of two bonds.
 Tensors with some connected and unconnected bonds can form a *tensor network* (TN).
 
