@@ -102,7 +102,7 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
-							<li ><a href="/category/physics.html">PHYSICS</a></li>
+							<li class="active"><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/intuitionofmind">Github</a></li>
@@ -144,7 +144,7 @@
                                                                                              
 
 								<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
-								<li ><a href="/category/physics.html">PHYSICS</a></li>
+								<li class="active"><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
                              <!--                                                                                                            -->
@@ -161,72 +161,178 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-
 <article>
-	<h3><a href="/a-generic-method-to-construct-matrix-product-operator.html">A generic method to construct matrix product operator</a></h3>
+    <style type="text/css">
+        h2 {
+            margin-left: 10px;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+    </style>
+
+    <head, style='font-size: 28px; font-weight: bold; color: #008cba;'>
+    A generic method to construct matrix product operator
+    </head, /style>
+	<hr/>
 	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Thu 16 September 2021. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
 	<h1>Preliminary</h1>
 <h2>From a many-body operator (MBO) to a matrix product operator (MPO)</h2>
 <p>We are talking about quantum many-body models on a lattice <span class="math">\(\Lambda\)</span>.
-A lattice <span class="math">\(\Lambda\)</span> is a graph consisting of <span class="math">\(|\Lambda|\)</span> sites, which are always labeled in a one-dimensional array <span class="math">\(\left\{0, \dots, |\Lambda|-1\right\}\)</span> in a specific …</p>
-		<p class="continue"><a href="/a-generic-method-to-construct-matrix-product-operator.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/how-to-wisely-contract-a-tensor-network.html">How to wisely contract a tensor network</a></h3>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Thu 21 May 2020. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
-	<h1>Introduction</h1>
-<h2>Tensors and their contraction</h2>
-<p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as <span class="math">\(M_{ij}\)</span>.
-For example, a four-dimensional tensor can be obtained by the tensor product of two matrices <span class="math">\(\left(A\otimes B\right)\_{ij}=C_{ij}=C_{k\cdot d_{l …</span></p>
-		<p class="continue"><a href="/how-to-wisely-contract-a-tensor-network.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/jia-zhou-zhi-xing.html">加州之行</a></h3>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Thu 28 November 2019. Tags: <a href="/tag/essay.html">essay</a>, </h6>
-	<p>加州的阳光刺眼而奇特，一步之间只要迈进阴影里就会立马感到一阵凉意。黄昏时分坐大巴从LAX出来在高速上堵车几近两个小时，天上不时有直升飞机盘旋，第二天才知道最近天干物燥，加州各处森林不断失火，灭火的飞机也是忙个不停。</p>
-<p>这是我这一年中第二次来到加州访问盛老师了。盛老师说话轻声细语，走路也几乎没有任何声音，言辞之间总是不时提起她的女儿，脸上洋溢着笑容，看的出来她是很爱她的女儿而且对她的女儿感到自豪的，但不时间也有些许小小的抱怨：她的女儿总是忙自己的事情而没有太多时间陪她在一起。盛老师总是乐观的，在我呆的期间，她的眼睛突然有点问题，去了医院检查似乎医生也没有什么太多办法，头一两天看得出来她似乎有点失落，但是过了两天她很快就向积极的一面转变了，庆幸问题不大，习惯了觉得也不是特别大的影响。</p>
-<p>盛老师是计算物理方面的顶级专家，更可贵的是她的物理同样非常好，对物理问题总是有非常准确的理解和把握。她是一位一流的物理学家。</p>
-<p>她以过来人的角色告诉我要不断地尝试，也许运气好就可以做出有影响力的工作。也给我讲了她的故事：她是在2000年之后来到加州，想做一些强关联的东西但是也不太知道该如何下手，在2002-2005年对于她来说是很关键是质变的几年，她在那三年中学到了很多东西， 之后一下子感觉就不一样了，能做很多东西也有很多人找她合作。</p>
-<p>“我那时候之前做的东西都很土”，盛老师是这么一个让我一下子笑出声的字眼形容她在来加州之前所做的研究，“做强关联可以学到很多东西，所以我真正的起步有点晚，但是没关系，有兴趣能一直做下去就很好了。“在这一个很长的过程中保持兴趣很重要，盛老师也告诉我也不能用力过猛，如果一段时间工作太辛苦导致失去了兴趣，那就是非常不好的事情了。跟随盛老师可以学习到很多东西，甚至不仅仅是技术和物理，她对年轻人的关心和鼓励都让我感到信心。CSUN是一所教学型的加州大学 …</p>
-		<p class="continue"><a href="/jia-zhou-zhi-xing.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/cong-stravashang-lue-kui-zhi-ye-che-shou-de-ri-chang-xun-lian-xin-lu-he-qiang-du-de-wen-ti.html">从Strava上略窥职业车手的日常训练，心率和强度的问题</a></h3>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Mon 09 April 2018. Tags: <a href="/tag/cycling.html">cycling</a>, <a href="/tag/training.html">training</a>, </h6>
-	<p>Strava已经成为最流行的运动社交社区，众多的职业车手都会将自己的数据上传到Strava，这样我们就很有机会从不同的角度职业车手的训练和比赛。然而由于所涉敏感，大部分职业车手都会隐去功率和心率等关键数据，特别是主将和明星车手，然而也有不少车手并不是特别在意依然公开其功率和心率数据，特别是一些不太重要的车队副将等。我们今天来看的是一位在Strava上十分活跃而有趣的职业车手，来自LottoNL–Jumbo车队的荷兰车手Robert Gesink. Robert算不上明星车手，在World Tour大集团中只是勤勤恳恳的普通一员，最好成绩是2016年赢下过环西单站，但是从Strava上我们看到了一个更加鲜活而有趣的Robert，他几乎会上传所有的骑行数据，而且会拍非常漂亮的照片发到Strava和Instagram来记录生活训练的点滴，骑行对于他不仅仅是一份工作，还有始终像孩子一样的热情。我们不太可能知道Robert精确的身体指标，但是作为一个粗略的数据可以参考：Robert体重68kg身高187cm<sup id="fnref:robert_wiki"><a class="footnote-ref" href="#fn:robert_wiki">1</a></sup>，2013年环京赛皇后赛段妙峰山的最后爬坡他做到了30分钟平均425w的功率输出，今年伤愈复出我们姑且认为他的FTP在400w上下。Robert在2017年环法中受到摔车影响伤及脊柱，在经历了近半年的康复后重新回归职业赛场，在年初参加了环澳赛。随着环弗兰德斯和巴黎鲁贝的举行，四月初的这一周来到了春季古典赛的高潮，但是对于Robert来说却没有什么比赛任务，因为他主要是在大环赛里担当副将的角色，所以他随同车队来到西班牙南部的Sierra Nevada地区训练，下面我们就来看看他这一周的训练以及我们能从中学到点什么。</p>
-<p><strong>4.2休息日骑行。</strong>这是一次极低的强度进行，在近两小时的骑行里平均心率只有90bpm，和普通人散步的强度差不多，这样的骑行非常有助于加速恢复而又不会造成训练负荷。（我在这里只是列出粗略的截图，如果想看详细数据的可以前往Robert的Strava主页查看相关，下同。）</p>
-<p><img alt="" src="/images/gesink_d1.png"></p>
-<p><strong>4.3质量训练日。</strong>在休息日之后紧接着就是高质量训练日（quality …</p>
-		<p class="continue"><a href="/cong-stravashang-lue-kui-zhi-ye-che-shou-de-ri-chang-xun-lian-xin-lu-he-qiang-du-de-wen-ti.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/du-disturbing-the-universe-by-freeman-dyson.html">读Disturbing the Universe, by Freeman Dyson</a></h3>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Tue 20 March 2018. Tags: <a href="/tag/science.html">science</a>, <a href="/tag/philosophy.html">philosophy</a>, </h6>
-	<p>在这部类似于自传的作品中，作者Freeman Dyson以淡淡略显忧郁地文笔讲述了几乎他一生的大部分经历，从英格兰到美国，从他服务于二战时期的雷达军队，一直到战后来到美国，长期供职于普林斯顿高等研究院。从中我们可以看到：Dyson不仅仅是一位优秀的物理学家，他在量子电动力学和多体统计物理等诸多领域都有深刻的贡献，杨振宁曾经这样评价Dyson：“直到今天我仍然认为诺贝尔委员会犯了一个错误，没有同时承认戴森的贡献。……重整化是这样的一个方案，它把加减法转化为因子重整化。这项工作需要极其复杂繁琐的证明，戴森一人完成了。他定义了原始发散、骨架图和重叠发散等概念，并利用这些概念，通过透彻的分析，完成了量子电动力学重整化的证明。他的悟性和能力令人惊讶。”<sup id="fnref:yzn"><a class="footnote-ref" href="#fn:yzn">1</a></sup>除此之外，Dyson更是一位不断思考整个人类社会和整个宇宙的智者，他对科学、技术以及其与人类社会相互作用的各个方面都有深刻而独到的见解。例如，他对科学技术的进步持有的批评态度：</p>
-<blockquote>
-<p>Technology has made evil anonymous. Through science and technology, evil is organized bureaucratically so that no individual is responsible for …</p></blockquote>
-		<p class="continue"><a href="/du-disturbing-the-universe-by-freeman-dyson.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-
-<div class="row" style="margin-bottom: -1.25em;">
-	<div class="small-12 columns text-center">
-		<div class="pagination-centered">
-			<ul class="pagination">
-				<li class="arrow unavailable"><a href="#">&larr; Previous</a></li>
-				<li class="current"><a href="/author/wayne-zheng.html">1</a></li>
-				<li class=""><a href="/author/wayne-zheng2.html">2</a></li>
-				<li class=""><a href="/author/wayne-zheng3.html">3</a></li>
-				<li class="arrow"><a href="/author/wayne-zheng2.html">Next &rarr;</a></li>
-			</ul>
-		</div>
-	</div>
+A lattice <span class="math">\(\Lambda\)</span> is a graph consisting of <span class="math">\(|\Lambda|\)</span> sites, which are always labeled in a one-dimensional array <span class="math">\(\left\{0, \dots, |\Lambda|-1\right\}\)</span> in a specific way in the first place.
+At each site, there is a local single-body Hilbert space. 
+A quantum many-body Hilbert space is defined as the <em>tensor product</em> of the local Hilbert spaces at each site.
+MBOs, such as various terms in the Hamiltonian of a quantum model or any kinds of observables, are also the tensor product of all the local operators.
+Note that we always simplify a MBO as it looks just like a single-body operator (SBO) when we write down some many-body quantum models, which, however, might lead to some misleading.
+For examples,
+</p>
+<div class="math">$$
+\begin{equation}
+    O_{j}\equiv\mathbb{1}\otimes\cdots{\mathop{o}\limits_{j}}\cdots\otimes\mathbb{1}, \quad O_{i}\cdot O_{j}\equiv\mathbb{1}\otimes\cdots{\mathop{o}\limits_{i}}\cdots{\mathop{o}\limits_{j}}\cdots\otimes\mathbb{1}
+\end{equation}
+$$</div>
+<p>
+for <span class="math">\(i, j=0, \cdots, |\Lambda|-1\)</span>.
+The upper-case letters denote MBOs while the lower-case letters denote SBOs.
+<span class="math">\(O_{j}\)</span> means that this MBO merely operates on site <span class="math">\(j\)</span> nontrivially while trivially on other sites.
+MPO is the idea to encode this tensor product structure of a MBO into the matrix product form of local operators.
+Formally,
+</p>
+<div class="math">$$
+\begin{equation}
+    O=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{N}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
+\end{equation}
+$$</div>
+<p>
+<span class="math">\(\gamma_{0, N}\)</span> are only one-dimensional virtual indices.
+The dimension of other internal virtual indices <span class="math">\(\gamma\)</span>s depends on some technical details, which we will talk later.</p>
+<h2>Lattice topology</h2>
+<p>Given an arbitrary quantum many-body Hamiltonian <span class="math">\(H=\sum_{j}h_{j}\)</span> and a lattice <span class="math">\(\Lambda\)</span>, we can define a topological space based on <span class="math">\(\Lambda\)</span> as <span class="math">\((\Lambda, \mathcal{T})\)</span>.
+<span class="math">\(\mathcal{T}\)</span> is the set consisting of several subsets of <span class="math">\(\Lambda\)</span>. <span class="math">\(\forall~\omega_{j}\subset\Lambda\)</span> and <span class="math">\(\omega_{j}\in\mathcal{T}\)</span> includes all sites on which a term <span class="math">\(h_{j}\)</span> in the Hamiltonian operates nontrivially.</p>
+<h1>Lower-triangular matrix construction</h1>
+<p>Practically we can accomplish this goal in a lower triangular matrix form<sup id="fnref:McCulloch"><a class="footnote-ref" href="#fn:McCulloch">1</a></sup>.
+Assume the dimension of the MPO frame is <span class="math">\(D\)</span>.
+Without loss of generality, the <span class="math">\(W_{0, 0}\equiv\mathbb{1}\)</span> and <span class="math">\(W_{D-1, D-1}=\mathbb{1}\)</span> are set as the identity operators.
+For the onsite term we have,
+</p>
+<div class="math">$$
+\begin{equation}
+    W_{1}=
+    \begin{pmatrix}
+        \mathbb{1} &amp; 0 \\
+        X &amp; \mathbb{1}
+    \end{pmatrix}.
+\end{equation}
+$$</div>
+<h2>Two-body operator</h2>
+<p>For the nearest-neighbor two-body interactions <span class="math">\(\sum_{j}X_{j}Y_{j+1}\)</span>, we have
+</p>
+<div class="math">$$
+\begin{equation}
+    W_{2}=\sum
+    \begin{pmatrix}
+        \mathbb{1} &amp; 0 &amp; 0 \\
+        Y &amp; 0 &amp; 0 \\
+        0 &amp; X &amp; \mathbb{1}
+    \end{pmatrix}.
+\end{equation}
+$$</div>
+<p>
+How about arbitrary long-range interactions such as <span class="math">\(\sum_{i, j}X_{i}Y_{j}\)</span>?
+For the MPOs on site-<span class="math">\(i, j\)</span>, they look like <span class="math">\(W_{2}\)</span>.
+Furthermore, the corresponding diagonal matrix elements of the MPOs between site-<span class="math">\(i\)</span> and -<span class="math">\(j\)</span> should have identity <span class="math">\(\mathbb{1}\)</span>.
+Firstly let us assume on each bond there are at most <span class="math">\(N_{\text{op}}\)</span> terms.
+<span class="math">\(d=j-i\)</span>.
+For the full Hamiltonian <span class="math">\(H=\sum_{k}h_{k}\)</span>, which may consists various <span class="math">\(d_{n}\)</span> ranges of interactions, we only need to encode different ranges of interacting terms into different blocks of the MPO.
+In this sense, the dimension of the MPO frame turns out to be
+</p>
+<div class="math">$$
+\begin{equation}
+    D=2+\sum_{n}d_{n}\cdot{N}_{\text{op}}.
+\end{equation}
+$$</div>
+<p>
+That is, longer-range interactions require larger MPO, of which dimension increases polynomially.
+Given a specific <span class="math">\(d_{n}\)</span>, the dimension of this very block is <span class="math">\(d_{n}N_{\text{op}}\)</span>.
+Within this block, the operators also should be place into sub-blocks with the dimension <span class="math">\(N_{\text{op}}\)</span> to avoid unwanted other possible overlaps.
+Practically, the all the bonds in the subset <span class="math">\(\{\omega_{j}^{(n)}\}\subset\mathcal{T}\)</span> with all the same <span class="math">\(d_{n}\)</span> can be placed in a increasing order in terms of the head site labels.</p>
+<h2><span class="math">\(N\)</span>-body operator</h2>
+<p>For arbitrary <span class="math">\(N\)</span>-body operators such as strings or loops, it is quite similar as the two-body operator with long-range interactions.
+The diagonal elements of the MPOs on the sites between the head and tail are inserted with the corresponding operators instead of identity operators.</p>
+<p>The original notebook and code can be found <a href="https://gitlab.com/waynezheng/public_notes/-/tree/main/sympy_long-range_mpon">here</a>.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:McCulloch">
+<p><a href="https://iopscience.iop.org/article/10.1088/1742-5468/2007/10/P10014">McCulloch, I. P. (2007). From density matrix renormalization group to matrix product states. Journal of Statistical Mechanics: Theory and Experiment, 2007(10):P10014–P10014.</a>&#160;<a class="footnote-backref" href="#fnref:McCulloch" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
 
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+</article, /style>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->

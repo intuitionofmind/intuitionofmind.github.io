@@ -1,13 +1,21 @@
 <!doctype html>
 <html class="no-js" lang="en">
 	  <head>
-    <!-- Using MathJax, with the delimiters $ -->
-    <!-- Conflict with pygments for the .mo and .mi -->
-<!-- Using MathJax, with the delimiters $ -->
-<!-- Conflict with pygments for the .mo and .mi --> 
+    <!--
+    <script type="text/x-mathjax-config">
+       mathjax.hub.config({
+       "html-css": {
+       styles: {
+       ".mathjax .mo, .mathjax .mi": {color: "black ! important"}}
+       },
+       tex2jax: {inlinemath: [['$','$'], ['\\\\(','\\\\)']],processescapes: true}
+       });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/mathjax.js?config=tex-ams_html"></script>
+    --!>
     <style type="text/css">
         head {
-            font-size: 20px;
+            font-size: 16px;
         }
         body {
             font-size: 12px;
@@ -23,24 +31,11 @@
             color: #008cba;
         }
         h3 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #008cba;
         }
     </style>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [ ["$$","$$"] ],
-                processEnvironments: true,
-                processEscapes: true,
-                tags: 'ams'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -63,7 +58,7 @@
 	<body>
     <style type="text/css">
         head {
-            font-size: 20px;
+            font-size: 18px;
         }
         body {
             font-size: 12px;
@@ -84,20 +79,6 @@
             color: #008cba;
         }
     </style>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [ ["$$","$$"] ],
-                processEnvironments: true,
-                processEscapes: true,
-                processRefs: true,
-                tags: 'ams'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -129,6 +110,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2021/09/index.html">September 2021 (1)</a></li>
 									<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 									<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 									<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
@@ -181,12 +163,22 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
+	<h3><a href="/a-generic-method-to-construct-matrix-product-operator.html">A generic method to construct matrix product operator</a></h3>
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Thu 16 September 2021. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
+	<h1>Preliminary</h1>
+<h2>From a many-body operator (MBO) to a matrix product operator (MPO)</h2>
+<p>We are talking about quantum many-body models on a lattice <span class="math">\(\Lambda\)</span>.
+A lattice <span class="math">\(\Lambda\)</span> is a graph consisting of <span class="math">\(|\Lambda|\)</span> sites, which are always labeled in a one-dimensional array <span class="math">\(\left\{0, \dots, |\Lambda|-1\right\}\)</span> in a specific …</p>
+		<p class="continue"><a href="/a-generic-method-to-construct-matrix-product-operator.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+<article>
 	<h3><a href="/how-to-wisely-contract-a-tensor-network.html">How to wisely contract a tensor network</a></h3>
 	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Thu 21 May 2020. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
 	<h1>Introduction</h1>
 <h2>Tensors and their contraction</h2>
-<p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as $M_{ij}$.
-For example, a four-dimensional tensor can be obtained by the tensor product of two matrices $\left(A\otimes B\right)_{ij}=C_{ij}=C_{k\cdot d_{l …</p>
+<p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as <span class="math">\(M_{ij}\)</span>.
+For example, a four-dimensional tensor can be obtained by the tensor product of two matrices <span class="math">\(\left(A\otimes B\right)\_{ij}=C_{ij}=C_{k\cdot d_{l …</span></p>
 		<p class="continue"><a href="/how-to-wisely-contract-a-tensor-network.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -218,19 +210,6 @@ For example, a four-dimensional tensor can be obtained by the tensor product of 
 <blockquote>
 <p>Technology has made evil anonymous. Through science and technology, evil is organized bureaucratically so that no individual is responsible for …</p></blockquote>
 		<p class="continue"><a href="/du-disturbing-the-universe-by-freeman-dyson.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/du-zuo-wei-yi-zhi-he-biao-xiang-de-shi-jie-di-yi-pian-shi-jie-zuo-wei-biao-xiang-chu-lun-fu-cong-chong-fen-gen-ju-lu-de-biao-xiang-jing-yan-he-ke-xue-de-ke-ti.html">读《作为意志和表象的世界》第一篇：世界作为表象初论——服从充分根据律的表象、经验和科学的客体</a></h3>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/blog-chinese.html">BLOG (CHINESE)</a> on Fri 12 January 2018. Tags: <a href="/tag/philosophy.html">philosophy</a>, </h6>
-	<p>最近在读叔本华的《作为意志和表象的世界》，全书共分为四篇以及附录，除了零散的笔记摘录，我想每读完一篇都尝试做一点系统的整理。</p>
-<p>叔本华在本书第二版序言中如是说：</p>
-<blockquote>
-<p>不是为了同时代的人们，不是为了同祖国的人们，而是为了人类，我才献出今日终于完成的这本书。我在这样的信心中交出它，相信它不会对于人类没有价值。<sup id="fnref:sbh0101"><a class="footnote-ref" href="#fn:sbh0101">1</a></sup></p>
-<p>只有从那些哲学思想的首创人那里，人们才能接受哲学思想。因此，谁要是向往哲学，就得亲自到原著那肃穆的圣地去找永垂不朽的大师。每一个这样真正的哲学家，他的主要篇章对他的学说所提供的洞见常什倍于庸俗头脑在转述这些学说时所作拖沓藐视的报告。<sup id="fnref:sbh0102"><a class="footnote-ref" href="#fn:sbh0102">2</a></sup></p>
-</blockquote>
-<p>第一篇一共16小节，主要抛出了叔本华的哲学构建中的一些基本概念和问题，特别地，叔本华还讨论了他对于数学、自然科学等的具体认识问题，深刻而富有远见，也显示了作者在自然科学和数学方面同样有很好的积累。在叔本华看来，世界有两面：表象和意志，表象的世界又分为主体和客体，主体是人或者动物，主体具有悟性能够感知表象世界，作为主体的悟性也是客体的因果律的对应。作为表象的世界之所以存在，其只因为主体的认识才具有意义，主体是世界实际存在意义的基本支柱，换言之，世界作为表象映射在每一个主体中都不尽相同，世界仅仅对于“我”才有意义，仅仅是我的表象而已。而表象也分层次，除了最直观的表象，“概念”是表象的一个特殊类别，要想认识表象的世界以及沉淀到概念，叔本华认为只能从直观出发 …</p>
-		<p class="continue"><a href="/du-zuo-wei-yi-zhi-he-biao-xiang-de-shi-jie-di-yi-pian-shi-jie-zuo-wei-biao-xiang-chu-lun-fu-cong-chong-fen-gen-ju-lu-de-biao-xiang-jing-yan-he-ke-xue-de-ke-ti.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
 
@@ -274,19 +253,20 @@ For example, a four-dimensional tensor can be obtained by the tensor product of 
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
 									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
 									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-2">tensor network</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
+											<li><a href="/posts/2021/09/index.html">September 2021 (1)</a></li>
 											<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 											<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 											<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>

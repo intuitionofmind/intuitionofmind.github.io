@@ -1,13 +1,21 @@
 <!doctype html>
 <html class="no-js" lang="en">
 	  <head>
-    <!-- Using MathJax, with the delimiters $ -->
-    <!-- Conflict with pygments for the .mo and .mi -->
-<!-- Using MathJax, with the delimiters $ -->
-<!-- Conflict with pygments for the .mo and .mi --> 
+    <!--
+    <script type="text/x-mathjax-config">
+       mathjax.hub.config({
+       "html-css": {
+       styles: {
+       ".mathjax .mo, .mathjax .mi": {color: "black ! important"}}
+       },
+       tex2jax: {inlinemath: [['$','$'], ['\\\\(','\\\\)']],processescapes: true}
+       });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/mathjax.js?config=tex-ams_html"></script>
+    --!>
     <style type="text/css">
         head {
-            font-size: 20px;
+            font-size: 16px;
         }
         body {
             font-size: 12px;
@@ -23,24 +31,11 @@
             color: #008cba;
         }
         h3 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #008cba;
         }
     </style>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [ ["$$","$$"] ],
-                processEnvironments: true,
-                processEscapes: true,
-                tags: 'ams'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -63,7 +58,7 @@
 	<body>
     <style type="text/css">
         head {
-            font-size: 20px;
+            font-size: 18px;
         }
         body {
             font-size: 12px;
@@ -84,20 +79,6 @@
             color: #008cba;
         }
     </style>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [ ["$$","$$"] ],
-                processEnvironments: true,
-                processEscapes: true,
-                processRefs: true,
-                tags: 'ams'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -129,6 +110,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2021/09/index.html">September 2021 (1)</a></li>
 									<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 									<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 									<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
@@ -196,75 +178,86 @@
 	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Thu 21 May 2020. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
 	<h1>Introduction</h1>
 <h2>Tensors and their contraction</h2>
-<p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as $M_{ij}$.
-For example, a four-dimensional tensor can be obtained by the tensor product of two matrices $\left(A\otimes B\right)_{ij}=C_{ij}=C_{k\cdot d_{l}+l, m\cdot d_{n}+n}=A_{km}\cdot B_{ln}\equiv T_{mn}^{kl}$, where $d_{l, n}$ are the dimensions of the corresponding indices.
+<p>Tensor is a higher-dimensional generalization of the matrix, which has two indices such as <span class="math">\(M_{ij}\)</span>.
+For example, a four-dimensional tensor can be obtained by the tensor product of two matrices <span class="math">\(\left(A\otimes B\right)\_{ij}=C_{ij}=C_{k\cdot d_{l}+l, m\cdot d_{n}+n}=A_{km}\cdot B_{ln}\equiv T_{mn}^{kl}\)</span>, where <span class="math">\(d_{l, n}\)</span> are the dimensions of the corresponding indices.
 Each index of a tensor is called a <em>bond</em>.
-Any element in a rank-$D$ tensor $T_{n_{0}, n_{1}, \cdots, n_{D-1}}$ can be mapped to a one-dimensional vector $v(p)$, which is the actual physical storage in a computer's memory.
+Any element in a rank-<span class="math">\(D\)</span> tensor <span class="math">\(T_{n_{0}, n_{1}, \cdots, n_{D-1}}\)</span> can be mapped to a one-dimensional vector <span class="math">\(v(p)\)</span>, which is the actual physical storage in a computer's memory.
 Generally there are two ways to do this.</p>
 <ul>
-<li><em>Row-major</em>. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=k+1}^{D-1}d_{l}\right)$. The elements along the last index are contiguous. It is implemented in <code>numpy</code> as default.</li>
-<li><em>Column-major</em>. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=0}^{k-1}d_{l}\right)$. The elements along the first index are contiguous. It is implemented in Fortran and <code>Eigen::Tensor&lt;&gt;</code> (C++) as default.</li>
+<li><em>Row-major</em>. <span class="math">\(p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=k+1}^{D-1}d_{l}\right)\)</span>. The elements along the last index are contiguous. It is implemented in <code>numpy</code> as default.</li>
+<li><em>Column-major</em>. <span class="math">\(p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=0}^{k-1}d_{l}\right)\)</span>. The elements along the first index are contiguous. It is implemented in Fortran and <code>Eigen::Tensor&lt;&gt;</code> (C++) as default.</li>
 </ul>
 <p>Two different tensors can be contracted if they share a same dimension.
-It is a generalization of the matrix production like $C_{ij}=\sum_{k}A_{ik}B_{kj}$.
+It is a generalization of the matrix production like <span class="math">\(C_{ij}=\sum_{k}A_{ik}B_{kj}\)</span>.
 Graphically, we use a connected link to denote the connection of two bonds.
 Tensors with some connected and unconnected bonds can form a <em>tensor network</em> (TN).</p>
 <h2>Matrix product state and matrix product operator</h2>
 <p>Firstly I should point out the so-called  and matrix product operator (MPO) are actually comprised of tensors rather than matrices.
 This is a historical issue.
 A one-dimensional (1D) quantum state can be written as a matrix product state (MPS):
-$$
+</p>
+<div class="math">$$
 \begin{equation}
-|\psi\rangle=\sum_{{j}}\left(A^{j_{0}}\cdots A^{j_{N-1}}\right)|j_{0}\cdots j_{N-1}\rangle.
+|\psi\rangle=\sum_{\{j\}}\left(A^{j_{0}}\cdots A^{j_{N-1}}\right)|j_{0}\cdots j_{N-1}\rangle.
 \end{equation}
-$$
-$A$ has already been chosen to be <em>left-canonical</em>, namely $\sum_{j}A^{j\dagger}A^{j}=1$.
+$$</div>
+<p>
+<span class="math">\(A\)</span> has already been chosen to be <em>left-canonical</em>, namely <span class="math">\(\sum_{j}A^{j\dagger}A^{j}=1\)</span>.
 The basic idea of MPO is to introduce more inner bonds to decouple the operation of a many-body operator with finite range interactions into the production of local onsite tensors.</p>
 <p>A matrix product operator (MPO) looks like
+</p>
+<div class="math">$$
 \begin{equation}
 H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
 \end{equation}
-$\gamma_{0}=1$ denotes a virtual bond.</p>
-<p>One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as </p>
-<p><center>
+$$</div>
+<p>
+<span class="math">\(\gamma_{0}=1\)</span> denotes a virtual bond.</p>
+<p>One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like <span class="math">\(\langle\psi|H|\psi\rangle\)</span>, which can be expressed as </p>
+<p><center></p>
 <div class="image" style="display:table;">
     <img src="/images/tn_contraction/tn_mpo_expectation_value.png" width="400"/>
     <div style="display:table-caption; caption-side:bottom; font-size:16px;">TN representation for $\langle\psi|H|\psi\rangle$.</div>
 </div>
-</center></p>
+<p></center></p>
 <h1>How to practically contract a TN</h1>
 <h2>An example</h2>
-<p>Here we consider a TN $\langle\psi|H|\psi\rangle$ as an example, in which $H$ is chosen to be the XYZ-model
+<p>Here we consider a TN <span class="math">\(\langle\psi|H|\psi\rangle\)</span> as an example, in which <span class="math">\(H\)</span> is chosen to be the XYZ-model
+</p>
+<div class="math">$$
 \begin{equation}
 H=\sum_{j=0}^{N-2}\left(J_{x}\sigma_{j}^{x}\sigma_{j+1}^{x}+J_{y}\sigma_{j}^{y}\sigma_{j+1}^{y}+J_{z}\sigma_{j}^{z}\sigma_{j+1}^{z}\right)+h\sum_{j=0}^{N-1}\sigma_{j}^{z}.
 \end{equation}
+$$</div>
+<p>
 Written into a MPO
-$$
+</p>
+<div class="math">$$
 \begin{equation}
     W_{n}=
     \begin{pmatrix}
         1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         J_{x}\sigma^{x} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         J_{y}\sigma^{y} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-        J_{z}\sigma^{z} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\ 
+        J_{z}\sigma^{z} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         h\sigma^{z} &amp; \sigma^{x} &amp; \sigma^{y} &amp; \sigma^{z} &amp; 1
     \end{pmatrix}.
     \label{eq:bulk_mpo}
 \end{equation}
-$$</p>
+$$</div>
 <p>we have several methods to contract this TN:</p>
 <ul>
 <li>
 <p><em>Naive method (NM)</em>.
 By a naive way, we can paste all the tensors piece by piece utilizing <code>numpy.tensordot</code>.
-On site $j$, we can paste the upper MPS, MPO and lower mps into a rank-6 onsite tensor.
+On site <span class="math">\(j\)</span>, we can paste the upper MPS, MPO and lower mps into a rank-6 onsite tensor.
 Then paste it to the environment tensor, which has three virtual bonds.
 As a member function of the MPO, it looks like:</p>
 </li>
 <li>
 <p><em>Optimized <code>einsum</code> (OE)</em>.
 By utilizing <code>opt_einsum</code><sup id="fnref:opt_sum"><a class="footnote-ref" href="#fn:opt_sum">1</a></sup>, we can speed up the contraction dramatically, which could find the optimal contraction order automatically.
-At each site $j$, we can contract the environment, upper MPS, MPO and lower MPS at the same time.
+At each site <span class="math">\(j\)</span>, we can contract the environment, upper MPS, MPO and lower MPS at the same time.
 Moreover, it supports CUDA through <a href="https://cupy.chainer.org"><code>CuPy</code></a>. </p>
 </li>
 <li>
@@ -274,33 +267,33 @@ This method will be particularly useful to contracting a two-dimensional TN.</p>
 </ul>
 <h2>Numerical results</h2>
 <p>Platform: <strong>Intel(R) Xeon(R) CPU E5-2640, NVIDIA Tesla P100, CUDA 9.2.88</strong>.
-The XYZ-Hamiltonian is chosen as $J_{x}=J_{y}=1.0, J_{z}=h=0.5$.
+The XYZ-Hamiltonian is chosen as <span class="math">\(J_{x}=J_{y}=1.0, J_{z}=h=0.5\)</span>.
 The MPS is generated randomly.</p>
 <p>We conclude that:</p>
 <ul>
 <li>
-<p>By utilizing <code>opt_einsum</code> in stead of the naive <code>tensordot</code>, the contraction can be dramatically speeded up $10^{3}$ times as much as possible especially with large bond dimension $\chi$.
-With relatively small $\chi$, CUDA-OE is even slower than OE, while not too much.</p>
+<p>By utilizing <code>opt_einsum</code> in stead of the naive <code>tensordot</code>, the contraction can be dramatically speeded up <span class="math">\(10^{3}\)</span> times as much as possible especially with large bond dimension <span class="math">\(\chi\)</span>.
+With relatively small <span class="math">\(\chi\)</span>, CUDA-OE is even slower than OE, while not too much.</p>
 </li>
 <li>
-<p><code>CUDA</code> can further speed up about as many as $10^{2}$ times.
-It reaches the threshold at about $\chi\simeq 250$, below which we think that the cores in GPU are not fully implemented.
-Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive <code>tensordot</code>.</p>
+<p><code>CUDA</code> can further speed up about as many as <span class="math">\(10^{2}\)</span> times.
+It reaches the threshold at about <span class="math">\(\chi\simeq 250\)</span>, below which we think that the cores in GPU are not fully implemented.
+Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we can speed up the tensor contraction as many as <span class="math">\(10^{5}\)</span> times in comparison with the naive <code>tensordot</code>.</p>
 </li>
 </ul>
-<p><center>
+<p><center></p>
 <div class="image" style="display:table;">
     <img src="/images/tn_contraction/time_nm_oe.png" width="400"/>
     <div style="display:table-caption; caption-side:bottom; font-size:16px;">Time for contracting a TN in terms of NM, OE and CUDA-OE.</div>
 </div>
-</center></p>
-<p><center>
+<p></center></p>
+<p><center></p>
 <div class="image" style="display:table;">
     <img src="/images/tn_contraction/time_cuda.png" width="400"/>
     <div style="display:table-caption; caption-side:bottom; font-size:16px;">Time for contracting a TN in terms of OE and CUDA-OE.</div>
 </div>
-</center></p>
-<p>The original notebook and code can be found <a href="https://gitlab.com/waynezheng/test_mps-mpo_contraction">here</a>.</p>
+<p></center></p>
+<p>The original notebook and code can be found <a href="https://gitlab.com/waynezheng/public_notes/-/tree/main/test_mps-mpo_contraction">here</a>.</p>
 <div class="footnote">
 <hr>
 <ol>
@@ -309,6 +302,68 @@ Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we c
 </li>
 </ol>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 </article, /style>
 
 <hr/>
@@ -338,19 +393,20 @@ Overall, if we use <code>opt_einsum</code> combined with <code>CUDA</code>, we c
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/tensor-network.html" class="tag-4">tensor network</a></li>
 									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
 									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-2">tensor network</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
+											<li><a href="/posts/2021/09/index.html">September 2021 (1)</a></li>
 											<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
 											<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
 											<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
