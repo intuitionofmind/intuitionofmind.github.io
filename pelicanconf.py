@@ -33,7 +33,7 @@ MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 
 # plugins
 PLUGIN_PATHS = ['./pelican-plugins/']
-PLUGINS = ['tag_cloud']
+PLUGINS = ['tag_cloud', 'render_math', 'sitemap', 'autopages']
 
 TAG_CLOUD_SORTING = 'random'
 TAG_CLOUD_BADGE = True

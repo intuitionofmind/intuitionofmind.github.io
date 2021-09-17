@@ -36,9 +36,11 @@ $A$ has already been chosen to be *left-canonical*, namely $\sum_{j}A^{j\dagger}
 The basic idea of MPO is to introduce more inner bonds to decouple the operation of a many-body operator with finite range interactions into the production of local onsite tensors.
 
 A matrix product operator (MPO) looks like
+$$
 \begin{equation}
-H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|\\{j^{\prime}\\}\rangle\langle\\{j\\}|.
+H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
 \end{equation}
+$$
 $\gamma_{0}=1$ denotes a virtual bond.
 
 One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as 
@@ -55,18 +57,20 @@ One of the simplest physical TN is to compute the expectation value of a MPO in 
 ## An example
 
 Here we consider a TN $\langle\psi|H|\psi\rangle$ as an example, in which $H$ is chosen to be the XYZ-model
+$$
 \begin{equation}
 H=\sum_{j=0}^{N-2}\left(J_{x}\sigma_{j}^{x}\sigma_{j+1}^{x}+J_{y}\sigma_{j}^{y}\sigma_{j+1}^{y}+J_{z}\sigma_{j}^{z}\sigma_{j+1}^{z}\right)+h\sum_{j=0}^{N-1}\sigma_{j}^{z}.
 \end{equation}
+$$
 Written into a MPO
 $$
 \begin{equation}
     W_{n}=
     \begin{pmatrix}
-        1 & 0 & 0 & 0 & 0 \\\\
-        J_{x}\sigma^{x} & 0 & 0 & 0 & 0 \\\\
-        J_{y}\sigma^{y} & 0 & 0 & 0 & 0 \\\\
-        J_{z}\sigma^{z} & 0 & 0 & 0 & 0 \\\\ 
+        1 & 0 & 0 & 0 & 0 \\
+        J_{x}\sigma^{x} & 0 & 0 & 0 & 0 \\
+        J_{y}\sigma^{y} & 0 & 0 & 0 & 0 \\
+        J_{z}\sigma^{z} & 0 & 0 & 0 & 0 \\
         h\sigma^{z} & \sigma^{x} & \sigma^{y} & \sigma^{z} & 1
     \end{pmatrix}.
     \label{eq:bulk_mpo}
@@ -118,6 +122,6 @@ Overall, if we use `opt_einsum` combined with `CUDA`, we can speed up the tensor
 </div>
 </center>
 
-The original notebook and code can be found [here](https://gitlab.com/waynezheng/test_mps-mpo_contraction).
+The original notebook and code can be found [here](https://gitlab.com/waynezheng/public_notes/-/tree/main/test_mps-mpo_contraction).
 
 [^opt_sum]: [Smith et al., (2018). opt_einsum - A Python package for optimizing contraction order for einsum-like expressions . Journal of Open Source Software, 3(26), 753.](https://joss.theoj.org/papers/10.21105/joss.00753)
