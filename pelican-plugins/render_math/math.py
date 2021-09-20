@@ -76,7 +76,7 @@ def process_settings(pelicanobj):
     mathjax_settings['mathjax_font'] = 'default'  # forces mathjax to use the specified font.
     mathjax_settings['process_summary'] = BeautifulSoup is not None  # will fix up summaries if math is cut off. Requires beautiful soup
     mathjax_settings['message_style'] = 'normal'  # This value controls the verbosity of the messages in the lower left-hand corner. Set it to "none" to eliminate all messages
-    mathjax_settings['font_list'] = ['STIX', 'TeX'] # Include in order of preference among TeX, STIX-Web, Asana-Math, Neo-Euler, Gyre-Pagella, Gyre-Termes and Latin-Modern
+    mathjax_settings['font_list'] = ['TeX'] # Include in order of preference among TeX, STIX-Web, Asana-Math, Neo-Euler, Gyre-Pagella, Gyre-Termes and Latin-Modern
     mathjax_settings['equation_numbering'] = 'none' # AMS, auto, none
 
     # Source for MathJax

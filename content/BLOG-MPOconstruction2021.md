@@ -58,7 +58,7 @@ $$
 For the nearest-neighbor two-body interactions $\sum_{j}X_{j}Y_{j+1}$, we have
 $$
 \begin{equation}
-    W_{2}=\sum
+    W_{2}=
     \begin{pmatrix}
         \mathbb{1} & 0 & 0 \\
         Y & 0 & 0 \\
