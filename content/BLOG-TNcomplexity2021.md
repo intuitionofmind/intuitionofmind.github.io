@@ -48,7 +48,7 @@ $$
     \mathfrak{C}_{d}({L}\cdot{A}\cdot{R}\cdot{W})&=\chi^{3}Dd+\chi^{3}D^{2}d+\chi^{2}D^{2}d^{2}.
 \end{align}
 $$
-Obviously, FIG. 2(c) is the optimal path if $\chi$ is much larger than $D$ and $d$, which is can be automatically found by **opt_einsum**[^Daniel]. **opt_einsum** is tested to be as fast as **numpy.tensordot** with the same path.
+Obviously, FIG. 2(c) is the optimal path if $\chi$ is much larger than $D$ and $d$, which can be automatically found by **opt_einsum**[^Daniel]. **opt_einsum** is tested to be as fast as **numpy.tensordot** with the same path.
 
 [^tensornet]: [Tutorial: Tensor Contractions](https://www.tensors.net/tutorial-1)  
 [^Daniel]: [Daniel G. A. Smith and Johnnie Gray, opt_einsum - A Python package for optimizing contraction order for einsum-like expressions. Journal of Open Source Software, 2018, 3(26), 753](https://github.com/dgasmith/opt_einsum)  
