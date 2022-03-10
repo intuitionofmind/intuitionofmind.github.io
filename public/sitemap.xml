@@ -5,42 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2021-11-22T17:12:34-00:00</lastmod>
+<lastmod>2022-03-10T23:46:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2021-11-22T17:12:34-00:00</lastmod>
+<lastmod>2022-03-10T23:46:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2021-11-22T17:12:34-00:00</lastmod>
+<lastmod>2022-03-10T23:46:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2021-11-22T17:12:34-00:00</lastmod>
+<lastmod>2022-03-10T23:46:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2021-11-22T17:12:34-00:00</lastmod>
+<lastmod>2022-03-10T23:46:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/info.html</loc>
-<lastmod>2021-11-22T17:12:34-00:00</lastmod>
+<lastmod>2022-03-10T23:46:22-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/wai-er-dian-yu-yin-li-1921fan-yi.html</loc>
+<lastmod>2022-03-10T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -165,8 +172,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/category/others.html</loc>
+<lastmod>2022-03-10T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/category/physics.html</loc>
 <lastmod>2021-11-22T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/philosophy.html</loc>
+<lastmod>2022-03-10T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -207,13 +228,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/philosophy.html</loc>
-<lastmod>2018-03-20T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>/tag/literature.html</loc>
 <lastmod>2017-02-28T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
@@ -222,7 +236,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/wayne-zheng.html</loc>
-<lastmod>2021-11-22T00:00:00-04:56</lastmod>
+<lastmod>2022-03-10T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

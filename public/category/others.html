@@ -1,6 +1,41 @@
 <!doctype html>
 <html class="no-js" lang="en">
-	<head>
+	  <head>
+    <!--
+    <script type="text/x-mathjax-config">
+       mathjax.hub.config({
+       "html-css": {
+       styles: {
+       ".mathjax .mo, .mathjax .mi": {color: "black ! important"}}
+       },
+       tex2jax: {inlinemath: [['$','$'], ['\\\\(','\\\\)']],processescapes: true}
+       });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/mathjax.js?config=tex-ams_html"></script>
+    --!>
+    <style type="text/css">
+        head {
+            font-size: 16px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -19,23 +54,41 @@
 
 <script>var _gaq=[['_setAccount','UA-91674826-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 
-		<!-- mathjax config similar to math.stackexchange -->
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$', '$'] ],
-				displayMath: [ ['$$', '$$']],
-				processEscapes: true,
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-			},
-			messageStyle: "none",
-			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-		});
-		</script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 	</head>
+
 	<body>
+    <style type="text/css">
+        head {
+            font-size: 18px;
+        }
+        body {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<!-- mobile top bar to activate nav -->
@@ -59,6 +112,8 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+							<li class="active"><a href="/category/others.html">OTHERS</a></li>
+							<li ><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/intuitionofmind">Github</a></li>
@@ -66,7 +121,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2017/10/index.html">October 2017 (1)</a></li>
+									<li><a href="/posts/2022/03/index.html">三月 2022 (1)</a></li>
 
 					</ul>	
 				</aside>
@@ -86,6 +141,8 @@
                                                                                              
 
 								<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
+								<li class="active"><a href="/category/others.html">OTHERS</a></li>
+								<li ><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
                              <!--                                                                                                            -->
@@ -102,12 +159,21 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-<h1>Archives for October 2017</h1>
+							<div class="row">
+								<div class="small-12 columns">
+									<h2>Category: OTHERS</h2>
+								</div>
+							</div>
 
-<dl>
-    <dt>Mon 09 October 2017</dt>
-    <dd><a href="/2017nian-huan-lun-ba-di-fu-pan-zhi-jing-wei-da-de-gu-dian-qi-zhi-che-shou.html">2017年环伦巴第复盘——致敬伟大的古典气质车手</a></dd>
-</dl>
+<article>
+	<h3><a href="/wai-er-dian-yu-yin-li-1921fan-yi.html">外尔《电与引力》（1921）翻译</a></h3>
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/others.html">OTHERS</a> on 四 10 三月 2022. Tags: <a href="/tag/philosophy.html">philosophy</a>, </h6>
+	<p>现代物理学表明，自然界中的基本作用力很可能只是起源于引力和电磁场<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。法拉第（Faraday）和麦克斯韦（Maxwell）将电磁场效应总结 …</p>
+		<p class="continue"><a href="/wai-er-dian-yu-yin-li-1921fan-yi.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+
+
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
@@ -134,19 +200,20 @@
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
-									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
-									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
 									<li><a href="/tag/science.html" class="tag-4">science</a></li>
 									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
+									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
+									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/tensor-network.html" class="tag-1">tensor network</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2017/10/index.html">October 2017 (1)</a></li>
+											<li><a href="/posts/2022/03/index.html">三月 2022 (1)</a></li>
 								</ul>
 							</div>
 
