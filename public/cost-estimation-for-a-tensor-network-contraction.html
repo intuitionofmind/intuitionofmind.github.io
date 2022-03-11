@@ -112,7 +112,7 @@
 
 						<!-- <li><label>Categories</label></li> -->
 							<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
-							<li ><a href="/category/others.html">OTHERS</a></li>
+							<li ><a href="/category/misc.html">MISC</a></li>
 							<li class="active"><a href="/category/physics.html">PHYSICS</a></li>
 
 						<li><label>Social</label></li>
@@ -121,23 +121,23 @@
 
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2022/03/index.html">三月 2022 (1)</a></li>
-									<li><a href="/posts/2021/11/index.html">十一月 2021 (1)</a></li>
-									<li><a href="/posts/2021/09/index.html">九月 2021 (1)</a></li>
-									<li><a href="/posts/2020/05/index.html">五月 2020 (1)</a></li>
-									<li><a href="/posts/2019/11/index.html">十一月 2019 (1)</a></li>
-									<li><a href="/posts/2018/04/index.html">四月 2018 (1)</a></li>
-									<li><a href="/posts/2018/03/index.html">三月 2018 (1)</a></li>
-									<li><a href="/posts/2018/01/index.html">一月 2018 (1)</a></li>
-									<li><a href="/posts/2017/10/index.html">十月 2017 (1)</a></li>
-									<li><a href="/posts/2017/02/index.html">二月 2017 (1)</a></li>
-									<li><a href="/posts/2017/01/index.html">一月 2017 (1)</a></li>
-									<li><a href="/posts/2015/06/index.html">六月 2015 (1)</a></li>
-									<li><a href="/posts/2013/09/index.html">九月 2013 (1)</a></li>
-									<li><a href="/posts/2013/07/index.html">七月 2013 (1)</a></li>
-									<li><a href="/posts/2012/11/index.html">十一月 2012 (1)</a></li>
-									<li><a href="/posts/2012/07/index.html">七月 2012 (1)</a></li>
-									<li><a href="/posts/2011/01/index.html">一月 2011 (1)</a></li>
+									<li><a href="/posts/2022/03/index.html">March 2022 (1)</a></li>
+									<li><a href="/posts/2021/11/index.html">November 2021 (1)</a></li>
+									<li><a href="/posts/2021/09/index.html">September 2021 (1)</a></li>
+									<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
+									<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
+									<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
+									<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>
+									<li><a href="/posts/2018/01/index.html">January 2018 (1)</a></li>
+									<li><a href="/posts/2017/10/index.html">October 2017 (1)</a></li>
+									<li><a href="/posts/2017/02/index.html">February 2017 (1)</a></li>
+									<li><a href="/posts/2017/01/index.html">January 2017 (1)</a></li>
+									<li><a href="/posts/2015/06/index.html">June 2015 (1)</a></li>
+									<li><a href="/posts/2013/09/index.html">September 2013 (1)</a></li>
+									<li><a href="/posts/2013/07/index.html">July 2013 (1)</a></li>
+									<li><a href="/posts/2012/11/index.html">November 2012 (1)</a></li>
+									<li><a href="/posts/2012/07/index.html">July 2012 (1)</a></li>
+									<li><a href="/posts/2011/01/index.html">January 2011 (1)</a></li>
 
 					</ul>	
 				</aside>
@@ -157,7 +157,7 @@
                                                                                              
 
 								<li ><a href="/category/blog-chinese.html">BLOG (CHINESE)</a></li>
-								<li ><a href="/category/others.html">OTHERS</a></li>
+								<li ><a href="/category/misc.html">MISC</a></li>
 								<li class="active"><a href="/category/physics.html">PHYSICS</a></li>
 						</ul>
 <!--                         <ul class="right">                                                                                                                                            -->
@@ -189,7 +189,10 @@
     Cost estimation for a tensor network contraction
     </head, /style>
 	<hr/>
-	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on 一 22 十一月 2021. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
+  <!--
+	<h6>Written by <a href="/author/wayne-zheng.html">Wayne Zheng</a> in <a href="/category/physics.html">PHYSICS</a> on Mon, Nov 22 2021. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
+  -->
+	<h6>written by <a href="/author/wayne-zheng.html">Wayne Zheng</a>   Cat: <a href="/category/physics.html">PHYSICS</a>  Date: Mon, Nov 22 2021. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
 	<h1>Matrix multiplication and tensor contraction cost</h1>
 <p>The computational cost of a matrix multiplication <span class="math">\(A\cdot{B}\)</span> reads <span class="math">\(\mathfrak{C}\left(A\cdot{B}\right)=d_{0}d_{1}d_{2}\)</span> with <span class="math">\(A\)</span> is a <span class="math">\(d_{0}\times{d}_{1}\)</span> matrix and <span class="math">\(B\)</span> is a <span class="math">\(d_{1}\times{d}_{2}\)</span> matrix, which means typically the computer needs to perform <span class="math">\(\left(d_{0}d_{1}d_{2}\right)\)</span> times floating point multiplication. Similarly, if <span class="math">\(A\)</span> and <span class="math">\(B\)</span> are generalized tensors as in FIG. 1(b), the corresponding <strong>tensordot</strong> cost is<sup id="fnref:tensornet"><a class="footnote-ref" href="#fn:tensornet">1</a></sup>
 </p>
@@ -335,36 +338,36 @@ Obviously, FIG. 2(c) is the optimal path if <span class="math">\(\chi\)</span> i
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
-									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
 									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
 									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
 									<li><a href="/tag/tensor-network.html" class="tag-1">tensor network</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2022/03/index.html">三月 2022 (1)</a></li>
-											<li><a href="/posts/2021/11/index.html">十一月 2021 (1)</a></li>
-											<li><a href="/posts/2021/09/index.html">九月 2021 (1)</a></li>
-											<li><a href="/posts/2020/05/index.html">五月 2020 (1)</a></li>
-											<li><a href="/posts/2019/11/index.html">十一月 2019 (1)</a></li>
-											<li><a href="/posts/2018/04/index.html">四月 2018 (1)</a></li>
-											<li><a href="/posts/2018/03/index.html">三月 2018 (1)</a></li>
-											<li><a href="/posts/2018/01/index.html">一月 2018 (1)</a></li>
-											<li><a href="/posts/2017/10/index.html">十月 2017 (1)</a></li>
-											<li><a href="/posts/2017/02/index.html">二月 2017 (1)</a></li>
-											<li><a href="/posts/2017/01/index.html">一月 2017 (1)</a></li>
-											<li><a href="/posts/2015/06/index.html">六月 2015 (1)</a></li>
-											<li><a href="/posts/2013/09/index.html">九月 2013 (1)</a></li>
-											<li><a href="/posts/2013/07/index.html">七月 2013 (1)</a></li>
-											<li><a href="/posts/2012/11/index.html">十一月 2012 (1)</a></li>
-											<li><a href="/posts/2012/07/index.html">七月 2012 (1)</a></li>
-											<li><a href="/posts/2011/01/index.html">一月 2011 (1)</a></li>
+											<li><a href="/posts/2022/03/index.html">March 2022 (1)</a></li>
+											<li><a href="/posts/2021/11/index.html">November 2021 (1)</a></li>
+											<li><a href="/posts/2021/09/index.html">September 2021 (1)</a></li>
+											<li><a href="/posts/2020/05/index.html">May 2020 (1)</a></li>
+											<li><a href="/posts/2019/11/index.html">November 2019 (1)</a></li>
+											<li><a href="/posts/2018/04/index.html">April 2018 (1)</a></li>
+											<li><a href="/posts/2018/03/index.html">March 2018 (1)</a></li>
+											<li><a href="/posts/2018/01/index.html">January 2018 (1)</a></li>
+											<li><a href="/posts/2017/10/index.html">October 2017 (1)</a></li>
+											<li><a href="/posts/2017/02/index.html">February 2017 (1)</a></li>
+											<li><a href="/posts/2017/01/index.html">January 2017 (1)</a></li>
+											<li><a href="/posts/2015/06/index.html">June 2015 (1)</a></li>
+											<li><a href="/posts/2013/09/index.html">September 2013 (1)</a></li>
+											<li><a href="/posts/2013/07/index.html">July 2013 (1)</a></li>
+											<li><a href="/posts/2012/11/index.html">November 2012 (1)</a></li>
+											<li><a href="/posts/2012/07/index.html">July 2012 (1)</a></li>
+											<li><a href="/posts/2011/01/index.html">January 2011 (1)</a></li>
 								</ul>
 							</div>
 

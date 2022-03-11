@@ -15,7 +15,10 @@
     {{ article.title }}
     </head, /style>
 	<hr/>
+  <!--
 	<h6>Written by <a href="{{ SITEURL }}/author/{{ article.author|lower|replace(' ', '-') }}.html">{{ article.author }}</a> {% if article.category %}in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category}}</a> {% endif %}on {{ article.locale_date }}.{% if article.tags|count > 0 %} Tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>, {% endfor %}{% endif %}</h6>
+  -->
+	<h6>written by <a href="{{ SITEURL }}/author/{{ article.author|lower|replace(' ', '-') }}.html">{{ article.author }}</a> {% if article.translation %} translated by <a href="{{ SITEURL }}/{{ article.translation.url }}">{{ article.translation }}</a> {% endif %} {% if article.category %} Cat: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> {% endif %} Date: {{ article.locale_date }}.{% if article.tags|count > 0 %} Tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>, {% endfor %}{% endif %}</h6>
 	{{ article.content }}
 </article, /style>
 

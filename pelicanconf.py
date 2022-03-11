@@ -14,7 +14,9 @@ STATIC_PATHS = ['pdfs', 'images']
 
 GOOGLE_ANALYTICS = 'UA-91674826-1'
 
-TIMEZONE = 'US/Eastern'
+TIMEZONE = 'Asia/Shanghai'
+DATE_FORMATS = {'en': '%a, %b %d %Y'}
+LOCALE = 'en_US'
 
 DEFAULT_LANG = 'en'
 
@@ -49,4 +51,4 @@ SOCIAL = (('Github', 'https://github.com/intuitionofmind'),
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
