@@ -1,29 +1,15 @@
-" vundle configuration
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" vim-plug plugin mannger
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdcommenter'
-let g:NERDSpaceDelims=2 " Add spaces after comment delimiters by default
+Plug 'scrooloose/nerdcommenter'
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 2
 let mapleader="."
 
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 set laststatus=2
 
-Plugin 'majutsushi/tagbar'
-nmap tt :TagbarToggle<CR>
-let g:tagbar_width=40
-let g:tagbar_autofocus=1 " let cursor auto in tag-window when it is opened
-
-Plugin 'lervag/vimtex'
+Plug 'lervag/vimtex'
 set complete=.
 
 " Plugin 'vim-latex/vim-latex'
@@ -37,33 +23,37 @@ set complete=.
 " let g:Tex_CompileRule_pdf='mkdir -p build && pdflatex -output-directory=build -interaction=nonstopmode $* && cp *.bib build && cd build && bibtex %:r && cd .. && pdflatex -output-directory=build -interaction=nonstopmode $* && mv build/$*.pdf . && open $*.pdf'
 " let g:Tex_CompileRule_pdf='mkdir -p build && pdflatex -output-directory=build -interaction=nonstopmode $* && cp *.bib build && cd build && bibtex %:r && cd .. && pdflatex -output-directory=build -interaction=nonstopmode $* && mv build/$*.pdf . && /usr/usr/bin/qlmanage -pp $*.pdf'
 
-Plugin 'fholgado/minibufexpl.vim'
+Plug 'fholgado/minibufexpl.vim'
 let g:minBufExplMapCTabSwitchBufs=1
 
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 
-Plugin 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 let g:SuperTabRetainCompletionType=2
 let g:SuperTabDefaultCompletionType="<C-N>"
 
-Plugin 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat'
 
-Plugin 'luochen1990/rainbow'
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+Plug 'luochen1990/rainbow'
+" set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1 
 
-Plugin 'yegappan/taglist'
+Plug 'yegappan/taglist'
 let Tlist_WinWidth=50
 let Tlist_Use_Right_Window=1
+" set to exit immediately only with the taglist window
+let Tlist_Exit_OnlyWindow=1
+map <silent> <F9> :TlistToggle<cr>
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
+
+filetype plugin indent on
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 "
@@ -93,7 +83,7 @@ let g:tex_flavor='xelatex'
 syntax enable
 syntax on
 
-colorscheme Benokai
+colorscheme default
 " let g:quantum_italics=1
 " let g:quantum_black=1
 
@@ -117,7 +107,7 @@ set cindent
 "set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 "set autoindent
 "set smartindent "improvement based on autoindent 
-"set ruler
+set ruler
 set showmatch
 set nobackup
 set noswapfile "forbid backup
@@ -129,8 +119,15 @@ autocmd FileType make setlocal noexpandtab  "makefile does not allow to interpra
 set filetype=python
 au BufNewFile,BufRead *.py,*.pyw setf python
 
-" map jk to 
+" map Esc command to 'jk'
 " imap jk <Esc>
 set backspace=indent,eol,start
 " no highlight search
 set nohlsearch
+
+" map windows splitting to easier ones
+nmap <C-w> <C-w>w
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
