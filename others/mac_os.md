@@ -15,13 +15,14 @@ to use color by adding  `export CLICOLOR=1` and `export LSCOLORS=GxFxCxDxBxegeda
 
 # Vim and related
 
-Copy `.vimrc` file to `~/` and install `Vundle` as https://github.com/VundleVim/Vundle.vim,
+Copy `.vimrc` file to `~/` and install `vim-plug` as https://github.com/junegunn/vim-plug,
 
 ```bash
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-then launch `vim` and run `:PluginInstall`.
+then launch `vim` and run `:PlugInstall`.
 
 # Latex and revtex
 
