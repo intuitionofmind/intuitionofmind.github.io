@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Wayne Zheng's HOMEPAGE - PHYSICS</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2021-11-22T00:00:00-05:00</updated><entry><title>Cost estimation for a tensor network contraction</title><link href="/cost-estimation-for-a-tensor-network-contraction.html" rel="alternate"></link><published>2021-11-22T00:00:00-05:00</published><updated>2021-11-22T00:00:00-05:00</updated><author><name>Wayne Zheng</name></author><id>tag:None,2021-11-22:/cost-estimation-for-a-tensor-network-contraction.html</id><summary type="html">&lt;h1&gt;Matrix multiplication and tensor contraction cost&lt;/h1&gt;
-&lt;p&gt;The computational cost of a matrix multiplication &lt;span class="math"&gt;\(A\cdot{B}\)&lt;/span&gt; reads &lt;span class="math"&gt;\(\mathfrak{C}\left(A\cdot{B}\right)=d_{0}d_{1}d_{2}\)&lt;/span&gt; with &lt;span class="math"&gt;\(A\)&lt;/span&gt; is a &lt;span class="math"&gt;\(d_{0}\times{d}_{1}\)&lt;/span&gt; matrix and &lt;span class="math"&gt;\(B\)&lt;/span&gt; is a &lt;span class="math"&gt;\(d_{1}\times{d}_{2}\)&lt;/span&gt; matrix …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Matrix multiplication and tensor contraction cost&lt;/h1&gt;
-&lt;p&gt;The computational cost of a matrix multiplication &lt;span class="math"&gt;\(A\cdot{B}\)&lt;/span&gt; reads &lt;span class="math"&gt;\(\mathfrak{C}\left(A\cdot{B}\right)=d_{0}d_{1}d_{2}\)&lt;/span&gt; with &lt;span class="math"&gt;\(A\)&lt;/span&gt; is a &lt;span class="math"&gt;\(d_{0}\times{d}_{1}\)&lt;/span&gt; matrix and &lt;span class="math"&gt;\(B\)&lt;/span&gt; is a &lt;span class="math"&gt;\(d_{1}\times{d}_{2}\)&lt;/span&gt; matrix, which means typically the computer needs to perform &lt;span class="math"&gt;\(\left(d_{0}d_{1}d_{2}\right)\)&lt;/span&gt; times floating point multiplication. Similarly, if &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; are generalized tensors as in FIG. 1(b), the corresponding &lt;strong&gt;tensordot&lt;/strong&gt; cost is&lt;sup id="fnref:tensornet"&gt;&lt;a class="footnote-ref" href="#fn:tensornet"&gt;1&lt;/a&gt;&lt;/sup&gt;
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Wayne Zheng's HOMEPAGE - PHYSICS</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2021-11-22T00:00:00+08:00</updated><entry><title>Cost estimation for a tensor network contraction</title><link href="/cost-estimation-for-a-tensor-network-contraction.html" rel="alternate"></link><published>2021-11-22T00:00:00+08:00</published><updated>2021-11-22T00:00:00+08:00</updated><author><name>Wayne Zheng</name></author><id>tag:None,2021-11-22:/cost-estimation-for-a-tensor-network-contraction.html</id><summary type="html">&lt;h1&gt;Matrix multiplication and tensor contraction cost&lt;/h1&gt;
+&lt;p&gt;The computational cost of a matrix multiplication $A\cdot{B}$ reads $\mathfrak{C}\left(A\cdot{B}\right)=d_{0}d_{1}d_{2}$ with $A$ is a $d_{0}\times{d}&lt;em 1&gt;{1}$ matrix and $B$ is a $d&lt;/em&gt;}\times{d&lt;em 0&gt;{2}$ matrix, which …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Matrix multiplication and tensor contraction cost&lt;/h1&gt;
+&lt;p&gt;The computational cost of a matrix multiplication $A\cdot{B}$ reads $\mathfrak{C}\left(A\cdot{B}\right)=d_{0}d_{1}d_{2}$ with $A$ is a $d_{0}\times{d}&lt;em 1&gt;{1}$ matrix and $B$ is a $d&lt;/em&gt;}\times{d&lt;em 0&gt;{2}$ matrix, which means typically the computer needs to perform $\left(d&lt;/em&gt;\right)$ times floating point multiplication. Similarly, if $A$ and $B$ are generalized tensors as in FIG. 1(b), the corresponding }d_{1}d_{2&lt;strong&gt;tensordot&lt;/strong&gt; cost is&lt;sup id="fnref:tensornet"&gt;&lt;a class="footnote-ref" href="#fn:tensornet"&gt;1&lt;/a&gt;&lt;/sup&gt;
+$$
 \begin{equation}
     \mathfrak{C}\left(A\cdot{B}\right)=d^{3}d^{2}=\frac{|\text{dim}(A)|\cdot|\text{dim}(B)|}{|\text{dim}(A\cap{B})|},
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
+$$
 since we need to sum over two internal connected indices at the same time.&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
 &lt;div class="image" style="display:table;"&gt;
@@ -16,16 +14,15 @@ since we need to sum over two internal connected indices at the same time.&lt;/p
     &lt;div style="display:table-caption; caption-side:bottom; font-size:16px;"&gt;FIG. 1. Matrix mutiplication and tensor contractions.&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;If a network consisting of more than two tensors is considered such as FIG. 1(c), one can contract the inner connected indices at the same time, which leads to a &lt;span class="math"&gt;\(d^{4}\)&lt;/span&gt; cost. Alternatively, we can contract them iteratively tensor by tensor, which leads to a cost &lt;span class="math"&gt;\(\mathfrak{C}((A\cdot{B})\cdot{C})=2d^{3}\)&lt;/span&gt;. If &lt;span class="math"&gt;\(d&amp;gt;2\)&lt;/span&gt;, the later way is more efficient.&lt;/p&gt;
+&lt;p&gt;If a network consisting of more than two tensors is considered such as FIG. 1(c), one can contract the inner connected indices at the same time, which leads to a $d^{4}$ cost. Alternatively, we can contract them iteratively tensor by tensor, which leads to a cost $\mathfrak{C}((A\cdot{B})\cdot{C})=2d^{3}$. If $d&amp;gt;2$, the later way is more efficient.&lt;/p&gt;
 &lt;h1&gt;An example in DMRG&lt;/h1&gt;
 &lt;p&gt;If we choose to contract a TN iteratively tensor by tensor, then we have different &lt;strong&gt;paths&lt;/strong&gt;, which turn out to have different costs. An example can be shown in the variational matrix product state method, where we need to solve the linear eigen-problem 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
     \mathcal{H}A=\lambda{A}
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;involving the effective Hamiltonian &lt;span class="math"&gt;\(\mathcal{H}\)&lt;/span&gt; contracting from the environment tensors &lt;span class="math"&gt;\(L\)&lt;/span&gt;, &lt;span class="math"&gt;\(R\)&lt;/span&gt; and the MPO tensor &lt;span class="math"&gt;\(W\)&lt;/span&gt;. &lt;span class="math"&gt;\(A\)&lt;/span&gt; is the one-site MPS tensor. We prefer to use the iterative method such as Lanczos. The major cost during this process is the generalized "matrix multiplication", namely the contraction of &lt;span class="math"&gt;\(L, W, R, A\)&lt;/span&gt; as shown in FIG. 2(a). &lt;span class="math"&gt;\(\chi\)&lt;/span&gt; is the bond dimension of the virtual bond in the MPS, &lt;span class="math"&gt;\(D\)&lt;/span&gt; is the MPO's bond dimension and &lt;span class="math"&gt;\(d\)&lt;/span&gt; is the physical bond dimension. &lt;span class="math"&gt;\(d=2\)&lt;/span&gt; for spin-&lt;span class="math"&gt;\(1/2\)&lt;/span&gt; systems. Typically, &lt;span class="math"&gt;\(\chi\gg{D}&amp;gt;d\)&lt;/span&gt;.  &lt;/p&gt;
+$$&lt;/p&gt;
+&lt;p&gt;involving the effective Hamiltonian $\mathcal{H}$ contracting from the environment tensors $L$, $R$ and the MPO tensor $W$. $A$ is the one-site MPS tensor. We prefer to use the iterative method such as Lanczos. The major cost during this process is the generalized "matrix multiplication", namely the contraction of $L, W, R, A$ as shown in FIG. 2(a). $\chi$ is the bond dimension of the virtual bond in the MPS, $D$ is the MPO's bond dimension and $d$ is the physical bond dimension. $d=2$ for spin-$1/2$ systems. Typically, $\chi\gg{D}&amp;gt;d$.  &lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
 &lt;div class="image" style="display:table;"&gt;
     &lt;img src="/images/tn_complexity/tn_complexity_02.jpeg" width="500"/&gt;
@@ -33,16 +30,14 @@ $$&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Thus, we have different paths to contract. As shown in FIG. 2(b, c, d), we have
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{align}
-    \mathfrak{C}_{b}({L}\cdot{W}\cdot{R}\cdot{A})&amp;amp;=\chi^{2}D^{2}d^{2}+\chi^{4}Dd^{2}+\chi^{4}d^{2}, \\
-    \mathfrak{C}_{c}({L}\cdot{A}\cdot{W}\cdot{R})&amp;amp;=2\chi^{3}Dd+\chi^{2}D^{2}d^{2}, \\
+    \mathfrak{C}&lt;em c&gt;{b}({L}\cdot{W}\cdot{R}\cdot{A})&amp;amp;=\chi^{2}D^{2}d^{2}+\chi^{4}Dd^{2}+\chi^{4}d^{2}, \
+    \mathfrak{C}&lt;/em&gt;, \
     \mathfrak{C}_{d}({L}\cdot{A}\cdot{R}\cdot{W})&amp;amp;=\chi^{3}Dd+\chi^{3}D^{2}d+\chi^{2}D^{2}d^{2}.
 \end{align}
-$$&lt;/div&gt;
-&lt;p&gt;
-Obviously, FIG. 2(c) is the optimal path if &lt;span class="math"&gt;\(\chi\)&lt;/span&gt; is much larger than &lt;span class="math"&gt;\(D\)&lt;/span&gt; and &lt;span class="math"&gt;\(d\)&lt;/span&gt;, which can be automatically found by &lt;strong&gt;opt_einsum&lt;/strong&gt;&lt;sup id="fnref:Daniel"&gt;&lt;a class="footnote-ref" href="#fn:Daniel"&gt;2&lt;/a&gt;&lt;/sup&gt;. &lt;strong&gt;opt_einsum&lt;/strong&gt; is tested to be as fast as &lt;strong&gt;numpy.tensordot&lt;/strong&gt; with the same path.&lt;/p&gt;
+$$
+Obviously, FIG. 2(c) is the optimal path if $\chi$ is much larger than $D$ and $d$, which can be automatically found by }({L}\cdot{A}\cdot{W}\cdot{R})&amp;amp;=2\chi^{3}Dd+\chi^{2}D^{2}d^{2&lt;strong&gt;opt_einsum&lt;/strong&gt;&lt;sup id="fnref:Daniel"&gt;&lt;a class="footnote-ref" href="#fn:Daniel"&gt;2&lt;/a&gt;&lt;/sup&gt;. &lt;strong&gt;opt_einsum&lt;/strong&gt; is tested to be as fast as &lt;strong&gt;numpy.tensordot&lt;/strong&gt; with the same path.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -53,153 +48,82 @@ Obviously, FIG. 2(c) is the optimal path if &lt;span class="math"&gt;\(\chi\)&lt
 &lt;p&gt;&lt;a href="https://github.com/dgasmith/opt_einsum"&gt;Daniel G. A. Smith and Johnnie Gray, opt_einsum - A Python package for optimizing contraction order for einsum-like expressions. Journal of Open Source Software, 2018, 3(26), 753&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:Daniel" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="PHYSICS"></category><category term="tensor network"></category></entry><entry><title>A generic method to construct matrix product operator</title><link href="/a-generic-method-to-construct-matrix-product-operator.html" rel="alternate"></link><published>2021-09-16T00:00:00-04:00</published><updated>2021-09-16T00:00:00-04:00</updated><author><name>Wayne Zheng</name></author><id>tag:None,2021-09-16:/a-generic-method-to-construct-matrix-product-operator.html</id><summary type="html">&lt;h1&gt;Preliminary&lt;/h1&gt;
+&lt;/div&gt;</content><category term="PHYSICS"></category><category term="tensor network"></category></entry><entry><title>A generic method to construct matrix product operator</title><link href="/a-generic-method-to-construct-matrix-product-operator.html" rel="alternate"></link><published>2021-09-16T00:00:00+08:00</published><updated>2021-09-16T00:00:00+08:00</updated><author><name>Wayne Zheng</name></author><id>tag:None,2021-09-16:/a-generic-method-to-construct-matrix-product-operator.html</id><summary type="html">&lt;h1&gt;Preliminary&lt;/h1&gt;
 &lt;h2&gt;From a many-body operator (MBO) to a matrix product operator (MPO)&lt;/h2&gt;
-&lt;p&gt;We are talking about quantum many-body models on a lattice &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt;.
-A lattice &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt; is a graph consisting of &lt;span class="math"&gt;\(|\Lambda|\)&lt;/span&gt; sites, which are always labeled in a one-dimensional array &lt;span class="math"&gt;\(\left\{0, \dots, |\Lambda|-1\right\}\)&lt;/span&gt; in a specific …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Preliminary&lt;/h1&gt;
+&lt;p&gt;We are talking about quantum many-body models on a lattice $\Lambda$.
+A lattice $\Lambda$ is a graph consisting of $|\Lambda|$ sites, which are always labeled in a one-dimensional array $\left{0, \dots, |\Lambda|-1\right}$ in a specific …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Preliminary&lt;/h1&gt;
 &lt;h2&gt;From a many-body operator (MBO) to a matrix product operator (MPO)&lt;/h2&gt;
-&lt;p&gt;We are talking about quantum many-body models on a lattice &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt;.
-A lattice &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt; is a graph consisting of &lt;span class="math"&gt;\(|\Lambda|\)&lt;/span&gt; sites, which are always labeled in a one-dimensional array &lt;span class="math"&gt;\(\left\{0, \dots, |\Lambda|-1\right\}\)&lt;/span&gt; in a specific way in the first place.
+&lt;p&gt;We are talking about quantum many-body models on a lattice $\Lambda$.
+A lattice $\Lambda$ is a graph consisting of $|\Lambda|$ sites, which are always labeled in a one-dimensional array $\left{0, \dots, |\Lambda|-1\right}$ in a specific way in the first place.
 At each site, there is a local single-body Hilbert space. 
 A quantum many-body Hilbert space is defined as the &lt;em&gt;tensor product&lt;/em&gt; of the local Hilbert spaces at each site.
 MBOs, such as various terms in the Hamiltonian of a quantum model or any kinds of observables, are also the tensor product of all the local operators.
 Note that we always simplify a MBO as it looks just like a single-body operator (SBO) when we write down some many-body quantum models, which, however, might lead to some misleading.
 For examples,
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
     O_{j}\equiv\mathbb{1}\otimes\cdots{\mathop{o}\limits_{j}}\cdots\otimes\mathbb{1}, \quad O_{i}\cdot O_{j}\equiv\mathbb{1}\otimes\cdots{\mathop{o}\limits_{i}}\cdots{\mathop{o}\limits_{j}}\cdots\otimes\mathbb{1}
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
-for &lt;span class="math"&gt;\(i, j=0, \cdots, |\Lambda|-1\)&lt;/span&gt;.
+$$
+for $i, j=0, \cdots, |\Lambda|-1$.
 The upper-case letters denote MBOs while the lower-case letters denote SBOs.
-&lt;span class="math"&gt;\(O_{j}\)&lt;/span&gt; means that this MBO merely operates on site &lt;span class="math"&gt;\(j\)&lt;/span&gt; nontrivially while trivially on other sites.
+$O_{j}$ means that this MBO merely operates on site $j$ nontrivially while trivially on other sites.
 MPO is the idea to encode this tensor product structure of a MBO into the matrix product form of local operators.
 Formally,
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
-    O=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{N}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
+    O=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{N}}^{j_{N-1}^{\prime}j_{N-1}}|{j^{\prime}}\rangle\langle{j}|.
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
-&lt;span class="math"&gt;\(\gamma_{0, N}\)&lt;/span&gt; are only one-dimensional virtual indices.
-The dimension of other internal virtual indices &lt;span class="math"&gt;\(\gamma\)&lt;/span&gt;s depends on some technical details, which we will talk later.&lt;/p&gt;
+$$
+$\gamma_{0, N}$ are only one-dimensional virtual indices.
+The dimension of other internal virtual indices $\gamma$s depends on some technical details, which we will talk later.&lt;/p&gt;
 &lt;h2&gt;Lattice topology&lt;/h2&gt;
-&lt;p&gt;Given an arbitrary quantum many-body Hamiltonian &lt;span class="math"&gt;\(H=\sum_{j}h_{j}\)&lt;/span&gt; and a lattice &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt;, we can define a topological space based on &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt; as &lt;span class="math"&gt;\((\Lambda, \mathcal{T})\)&lt;/span&gt;.
-&lt;span class="math"&gt;\(\mathcal{T}\)&lt;/span&gt; is the set consisting of several subsets of &lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt;. &lt;span class="math"&gt;\(\forall~\omega_{j}\subset\Lambda\)&lt;/span&gt; and &lt;span class="math"&gt;\(\omega_{j}\in\mathcal{T}\)&lt;/span&gt; includes all sites on which a term &lt;span class="math"&gt;\(h_{j}\)&lt;/span&gt; in the Hamiltonian operates nontrivially.&lt;/p&gt;
+&lt;p&gt;Given an arbitrary quantum many-body Hamiltonian $H=\sum_{j}h_{j}$ and a lattice $\Lambda$, we can define a topological space based on $\Lambda$ as $(\Lambda, \mathcal{T})$.
+$\mathcal{T}$ is the set consisting of several subsets of $\Lambda$. $\forall~\omega_{j}\subset\Lambda$ and $\omega_{j}\in\mathcal{T}$ includes all sites on which a term $h_{j}$ in the Hamiltonian operates nontrivially.&lt;/p&gt;
 &lt;h1&gt;Lower-triangular matrix construction&lt;/h1&gt;
 &lt;p&gt;Practically we can accomplish this goal in a lower triangular matrix form&lt;sup id="fnref:McCulloch"&gt;&lt;a class="footnote-ref" href="#fn:McCulloch"&gt;1&lt;/a&gt;&lt;/sup&gt;.
-Assume the dimension of the MPO frame is &lt;span class="math"&gt;\(D\)&lt;/span&gt;.
-Without loss of generality, the &lt;span class="math"&gt;\(W_{0, 0}\equiv\mathbb{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(W_{D-1, D-1}=\mathbb{1}\)&lt;/span&gt; are set as the identity operators.
+Assume the dimension of the MPO frame is $D$.
+Without loss of generality, the $W_{0, 0}\equiv\mathbb{1}$ and $W_{D-1, D-1}=\mathbb{1}$ are set as the identity operators.
 For the onsite term we have,
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
     W_{1}=
     \begin{pmatrix}
-        \mathbb{1} &amp;amp; 0 \\
+        \mathbb{1} &amp;amp; 0 \
         X &amp;amp; \mathbb{1}
     \end{pmatrix}.
 \end{equation}
-$$&lt;/div&gt;
+$$&lt;/p&gt;
 &lt;h2&gt;Two-body operator&lt;/h2&gt;
-&lt;p&gt;For the nearest-neighbor two-body interactions &lt;span class="math"&gt;\(\sum_{j}X_{j}Y_{j+1}\)&lt;/span&gt;, we have
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+&lt;p&gt;For the nearest-neighbor two-body interactions $\sum_{j}X_{j}Y_{j+1}$, we have
+$$
 \begin{equation}
     W_{2}=
     \begin{pmatrix}
-        \mathbb{1} &amp;amp; 0 &amp;amp; 0 \\
-        Y &amp;amp; 0 &amp;amp; 0 \\
+        \mathbb{1} &amp;amp; 0 &amp;amp; 0 \
+        Y &amp;amp; 0 &amp;amp; 0 \
         0 &amp;amp; X &amp;amp; \mathbb{1}
     \end{pmatrix}.
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
-How about arbitrary long-range interactions such as &lt;span class="math"&gt;\(\sum_{i, j}X_{i}Y_{j}\)&lt;/span&gt;?
-For the MPOs on site-&lt;span class="math"&gt;\(i, j\)&lt;/span&gt;, they look like &lt;span class="math"&gt;\(W_{2}\)&lt;/span&gt;.
-Furthermore, the corresponding diagonal matrix elements of the MPOs between site-&lt;span class="math"&gt;\(i\)&lt;/span&gt; and -&lt;span class="math"&gt;\(j\)&lt;/span&gt; should have identity &lt;span class="math"&gt;\(\mathbb{1}\)&lt;/span&gt;.
-Firstly let us assume on each bond there are at most &lt;span class="math"&gt;\(N_{\text{op}}\)&lt;/span&gt; terms.
-&lt;span class="math"&gt;\(d=j-i\)&lt;/span&gt;.
-For the full Hamiltonian &lt;span class="math"&gt;\(H=\sum_{k}h_{k}\)&lt;/span&gt;, which may consists various &lt;span class="math"&gt;\(d_{n}\)&lt;/span&gt; ranges of interactions, we only need to encode different ranges of interacting terms into different blocks of the MPO.
+$$
+How about arbitrary long-range interactions such as $\sum_{i, j}X_{i}Y_{j}$?
+For the MPOs on site-$i, j$, they look like $W_{2}$.
+Furthermore, the corresponding diagonal matrix elements of the MPOs between site-$i$ and -$j$ should have identity $\mathbb{1}$.
+Firstly let us assume on each bond there are at most $N_{\text{op}}$ terms.
+$d=j-i$.
+For the full Hamiltonian $H=\sum_{k}h_{k}$, which may consists various $d_{n}$ ranges of interactions, we only need to encode different ranges of interacting terms into different blocks of the MPO.
 In this sense, the dimension of the MPO frame turns out to be
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
-    D=2+\sum_{n}d_{n}\cdot{N}_{\text{op}}.
+    D=2+\sum_{n}d_{n}\cdot{N}&lt;em n&gt;{\text{op}}.
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
+$$
 That is, longer-range interactions require larger MPO, of which dimension increases polynomially.
-Given a specific &lt;span class="math"&gt;\(d_{n}\)&lt;/span&gt;, the dimension of this very block is &lt;span class="math"&gt;\(d_{n}N_{\text{op}}\)&lt;/span&gt;.
-Within this block, the operators also should be place into sub-blocks with the dimension &lt;span class="math"&gt;\(N_{\text{op}}\)&lt;/span&gt; to avoid unwanted other possible overlaps.
-Practically, the all the bonds in the subset &lt;span class="math"&gt;\(\{\omega_{j}^{(n)}\}\subset\mathcal{T}\)&lt;/span&gt; with all the same &lt;span class="math"&gt;\(d_{n}\)&lt;/span&gt; can be placed in a increasing order in terms of the head site labels.&lt;/p&gt;
-&lt;h2&gt;&lt;span class="math"&gt;\(N\)&lt;/span&gt;-body operator&lt;/h2&gt;
-&lt;p&gt;For arbitrary &lt;span class="math"&gt;\(N\)&lt;/span&gt;-body operators such as strings or loops, it is quite similar as the two-body operator with long-range interactions.
+Given a specific $d&lt;/em&gt;$.
+Within this block, the operators also should be place into sub-blocks with the dimension $N_{\text{op}}$ to avoid unwanted other possible overlaps.
+Practically, the all the bonds in the subset ${\omega_{j}^{(n)}}\subset\mathcal{T}$ with all the same $d_{n}$ can be placed in a increasing order in terms of the head site labels.}$, the dimension of this very block is $d_{n}N_{\text{op}&lt;/p&gt;
+&lt;h2&gt;$N$-body operator&lt;/h2&gt;
+&lt;p&gt;For arbitrary $N$-body operators such as strings or loops, it is quite similar as the two-body operator with long-range interactions.
 The diagonal elements of the MPOs on the sites between the head and tail are inserted with the corresponding operators instead of identity operators.&lt;/p&gt;
 &lt;p&gt;The original notebook and code can be found &lt;a href="https://gitlab.com/waynezheng/public_notes/-/tree/main/sympy_long-range_mpon"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="footnote"&gt;
@@ -209,109 +133,43 @@ The diagonal elements of the MPOs on the sites between the head and tail are ins
 &lt;p&gt;&lt;a href="https://iopscience.iop.org/article/10.1088/1742-5468/2007/10/P10014"&gt;McCulloch, I. P. (2007). From density matrix renormalization group to matrix product states. Journal of Statistical Mechanics: Theory and Experiment, 2007(10):P10014–P10014.&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:McCulloch" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="PHYSICS"></category><category term="tensor network"></category></entry><entry><title>How to wisely contract a tensor network</title><link href="/how-to-wisely-contract-a-tensor-network.html" rel="alternate"></link><published>2020-05-21T00:00:00-04:00</published><updated>2020-05-23T00:00:00-04:00</updated><author><name>Wayne Zheng</name></author><id>tag:None,2020-05-21:/how-to-wisely-contract-a-tensor-network.html</id><summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;/div&gt;</content><category term="PHYSICS"></category><category term="tensor network"></category></entry><entry><title>How to wisely contract a tensor network</title><link href="/how-to-wisely-contract-a-tensor-network.html" rel="alternate"></link><published>2020-05-21T00:00:00+08:00</published><updated>2020-05-23T00:00:00+08:00</updated><author><name>Wayne Zheng</name></author><id>tag:None,2020-05-21:/how-to-wisely-contract-a-tensor-network.html</id><summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;h2&gt;Tensors and their contraction&lt;/h2&gt;
-&lt;p&gt;Tensor is a higher-dimensional generalization of the matrix, which has two indices such as &lt;span class="math"&gt;\(M_{ij}\)&lt;/span&gt;.
-For example, a four-dimensional tensor can be obtained by the tensor product of two matrices &lt;span class="math"&gt;\(\left(A\otimes B\right)\_{ij}=C_{ij}=C_{k\cdot d_{l}+l …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Tensor is a higher-dimensional generalization of the matrix, which has two indices such as $M_{ij}$.
+For example, a four-dimensional tensor can be obtained by the tensor product of two matrices $\left(A\otimes B\right)_{ij}=C_{ij}=C_{k\cdot d_{l …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;h2&gt;Tensors and their contraction&lt;/h2&gt;
-&lt;p&gt;Tensor is a higher-dimensional generalization of the matrix, which has two indices such as &lt;span class="math"&gt;\(M_{ij}\)&lt;/span&gt;.
-For example, a four-dimensional tensor can be obtained by the tensor product of two matrices &lt;span class="math"&gt;\(\left(A\otimes B\right)\_{ij}=C_{ij}=C_{k\cdot d_{l}+l, m\cdot d_{n}+n}=A_{km}\cdot B_{ln}\equiv T_{mn}^{kl}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(d_{l, n}\)&lt;/span&gt; are the dimensions of the corresponding indices.
+&lt;p&gt;Tensor is a higher-dimensional generalization of the matrix, which has two indices such as $M_{ij}$.
+For example, a four-dimensional tensor can be obtained by the tensor product of two matrices $\left(A\otimes B\right)_{ij}=C_{ij}=C_{k\cdot d_{l}+l, m\cdot d_{n}+n}=A_{km}\cdot B_{ln}\equiv T_{mn}^{kl}$, where $d_{l, n}$ are the dimensions of the corresponding indices.
 Each index of a tensor is called a &lt;em&gt;bond&lt;/em&gt;.
-Any element in a rank-&lt;span class="math"&gt;\(D\)&lt;/span&gt; tensor &lt;span class="math"&gt;\(T_{n_{0}, n_{1}, \cdots, n_{D-1}}\)&lt;/span&gt; can be mapped to a one-dimensional vector &lt;span class="math"&gt;\(v(p)\)&lt;/span&gt;, which is the actual physical storage in a computer's memory.
+Any element in a rank-$D$ tensor $T_{n_{0}, n_{1}, \cdots, n_{D-1}}$ can be mapped to a one-dimensional vector $v(p)$, which is the actual physical storage in a computer's memory.
 Generally there are two ways to do this.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Row-major&lt;/em&gt;. &lt;span class="math"&gt;\(p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=k+1}^{D-1}d_{l}\right)\)&lt;/span&gt;. The elements along the last index are contiguous. It is implemented in &lt;code&gt;numpy&lt;/code&gt; as default.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Column-major&lt;/em&gt;. &lt;span class="math"&gt;\(p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=0}^{k-1}d_{l}\right)\)&lt;/span&gt;. The elements along the first index are contiguous. It is implemented in Fortran and &lt;code&gt;Eigen::Tensor&amp;lt;&amp;gt;&lt;/code&gt; (C++) as default.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Row-major&lt;/em&gt;. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=k+1}^{D-1}d_{l}\right)$. The elements along the last index are contiguous. It is implemented in &lt;code&gt;numpy&lt;/code&gt; as default.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Column-major&lt;/em&gt;. $p=\sum_{k=0}^{D-1}n_{k}\cdot\left(\prod_{l=0}^{k-1}d_{l}\right)$. The elements along the first index are contiguous. It is implemented in Fortran and &lt;code&gt;Eigen::Tensor&amp;lt;&amp;gt;&lt;/code&gt; (C++) as default.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Two different tensors can be contracted if they share a same dimension.
-It is a generalization of the matrix production like &lt;span class="math"&gt;\(C_{ij}=\sum_{k}A_{ik}B_{kj}\)&lt;/span&gt;.
+It is a generalization of the matrix production like $C_{ij}=\sum_{k}A_{ik}B_{kj}$.
 Graphically, we use a connected link to denote the connection of two bonds.
 Tensors with some connected and unconnected bonds can form a &lt;em&gt;tensor network&lt;/em&gt; (TN).&lt;/p&gt;
 &lt;h2&gt;Matrix product state and matrix product operator&lt;/h2&gt;
 &lt;p&gt;Firstly I should point out the so-called  and matrix product operator (MPO) are actually comprised of tensors rather than matrices.
 This is a historical issue.
 A one-dimensional (1D) quantum state can be written as a matrix product state (MPS):
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
-|\psi\rangle=\sum_{\{j\}}\left(A^{j_{0}}\cdots A^{j_{N-1}}\right)|j_{0}\cdots j_{N-1}\rangle.
+|\psi\rangle=\sum_{{j}}\left(A^{j_{0}}\cdots A^{j_{N-1}}\right)|j_{0}\cdots j_{N-1}\rangle.
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
-&lt;span class="math"&gt;\(A\)&lt;/span&gt; has already been chosen to be &lt;em&gt;left-canonical&lt;/em&gt;, namely &lt;span class="math"&gt;\(\sum_{j}A^{j\dagger}A^{j}=1\)&lt;/span&gt;.
+$$
+$A$ has already been chosen to be &lt;em&gt;left-canonical&lt;/em&gt;, namely $\sum_{j}A^{j\dagger}A^{j}=1$.
 The basic idea of MPO is to introduce more inner bonds to decouple the operation of a many-body operator with finite range interactions into the production of local onsite tensors.&lt;/p&gt;
 &lt;p&gt;A matrix product operator (MPO) looks like
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
-H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
+H=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{0}}^{j_{N-1}^{\prime}j_{N-1}}|{j^{\prime}}\rangle\langle{j}|.
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
-&lt;span class="math"&gt;\(\gamma_{0}=1\)&lt;/span&gt; denotes a virtual bond.&lt;/p&gt;
-&lt;p&gt;One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like &lt;span class="math"&gt;\(\langle\psi|H|\psi\rangle\)&lt;/span&gt;, which can be expressed as &lt;/p&gt;
+$$
+$\gamma_{0}=1$ denotes a virtual bond.&lt;/p&gt;
+&lt;p&gt;One of the simplest physical TN is to compute the expectation value of a MPO in terms a MPS like $\langle\psi|H|\psi\rangle$, which can be expressed as &lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
 &lt;div class="image" style="display:table;"&gt;
     &lt;img src="/images/tn_contraction/tn_mpo_expectation_value.png" width="400"/&gt;
@@ -320,42 +178,39 @@ $$&lt;/div&gt;
 &lt;p&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;h1&gt;How to practically contract a TN&lt;/h1&gt;
 &lt;h2&gt;An example&lt;/h2&gt;
-&lt;p&gt;Here we consider a TN &lt;span class="math"&gt;\(\langle\psi|H|\psi\rangle\)&lt;/span&gt; as an example, in which &lt;span class="math"&gt;\(H\)&lt;/span&gt; is chosen to be the XYZ-model
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+&lt;p&gt;Here we consider a TN $\langle\psi|H|\psi\rangle$ as an example, in which $H$ is chosen to be the XYZ-model
+$$
 \begin{equation}
 H=\sum_{j=0}^{N-2}\left(J_{x}\sigma_{j}^{x}\sigma_{j+1}^{x}+J_{y}\sigma_{j}^{y}\sigma_{j+1}^{y}+J_{z}\sigma_{j}^{z}\sigma_{j+1}^{z}\right)+h\sum_{j=0}^{N-1}\sigma_{j}^{z}.
 \end{equation}
-$$&lt;/div&gt;
-&lt;p&gt;
+$$
 Written into a MPO
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
+$$
 \begin{equation}
     W_{n}=
     \begin{pmatrix}
-        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
-        J_{x}\sigma^{x} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
-        J_{y}\sigma^{y} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
-        J_{z}\sigma^{z} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \
+        J_{x}\sigma^{x} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \
+        J_{y}\sigma^{y} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \
+        J_{z}\sigma^{z} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \
         h\sigma^{z} &amp;amp; \sigma^{x} &amp;amp; \sigma^{y} &amp;amp; \sigma^{z} &amp;amp; 1
     \end{pmatrix}.
     \label{eq:bulk_mpo}
 \end{equation}
-$$&lt;/div&gt;
+$$&lt;/p&gt;
 &lt;p&gt;we have several methods to contract this TN:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;Naive method (NM)&lt;/em&gt;.
 By a naive way, we can paste all the tensors piece by piece utilizing &lt;code&gt;numpy.tensordot&lt;/code&gt;.
-On site &lt;span class="math"&gt;\(j\)&lt;/span&gt;, we can paste the upper MPS, MPO and lower mps into a rank-6 onsite tensor.
+On site $j$, we can paste the upper MPS, MPO and lower mps into a rank-6 onsite tensor.
 Then paste it to the environment tensor, which has three virtual bonds.
 As a member function of the MPO, it looks like:&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;Optimized &lt;code&gt;einsum&lt;/code&gt; (OE)&lt;/em&gt;.
 By utilizing &lt;code&gt;opt_einsum&lt;/code&gt;&lt;sup id="fnref:opt_sum"&gt;&lt;a class="footnote-ref" href="#fn:opt_sum"&gt;1&lt;/a&gt;&lt;/sup&gt;, we can speed up the contraction dramatically, which could find the optimal contraction order automatically.
-At each site &lt;span class="math"&gt;\(j\)&lt;/span&gt;, we can contract the environment, upper MPS, MPO and lower MPS at the same time.
+At each site $j$, we can contract the environment, upper MPS, MPO and lower MPS at the same time.
 Moreover, it supports CUDA through &lt;a href="https://cupy.chainer.org"&gt;&lt;code&gt;CuPy&lt;/code&gt;&lt;/a&gt;. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -365,18 +220,18 @@ This method will be particularly useful to contracting a two-dimensional TN.&lt;
 &lt;/ul&gt;
 &lt;h2&gt;Numerical results&lt;/h2&gt;
 &lt;p&gt;Platform: &lt;strong&gt;Intel(R) Xeon(R) CPU E5-2640, NVIDIA Tesla P100, CUDA 9.2.88&lt;/strong&gt;.
-The XYZ-Hamiltonian is chosen as &lt;span class="math"&gt;\(J_{x}=J_{y}=1.0, J_{z}=h=0.5\)&lt;/span&gt;.
+The XYZ-Hamiltonian is chosen as $J_{x}=J_{y}=1.0, J_{z}=h=0.5$.
 The MPS is generated randomly.&lt;/p&gt;
 &lt;p&gt;We conclude that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;By utilizing &lt;code&gt;opt_einsum&lt;/code&gt; in stead of the naive &lt;code&gt;tensordot&lt;/code&gt;, the contraction can be dramatically speeded up &lt;span class="math"&gt;\(10^{3}\)&lt;/span&gt; times as much as possible especially with large bond dimension &lt;span class="math"&gt;\(\chi\)&lt;/span&gt;.
-With relatively small &lt;span class="math"&gt;\(\chi\)&lt;/span&gt;, CUDA-OE is even slower than OE, while not too much.&lt;/p&gt;
+&lt;p&gt;By utilizing &lt;code&gt;opt_einsum&lt;/code&gt; in stead of the naive &lt;code&gt;tensordot&lt;/code&gt;, the contraction can be dramatically speeded up $10^{3}$ times as much as possible especially with large bond dimension $\chi$.
+With relatively small $\chi$, CUDA-OE is even slower than OE, while not too much.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;CUDA&lt;/code&gt; can further speed up about as many as &lt;span class="math"&gt;\(10^{2}\)&lt;/span&gt; times.
-It reaches the threshold at about &lt;span class="math"&gt;\(\chi\simeq 250\)&lt;/span&gt;, below which we think that the cores in GPU are not fully implemented.
-Overall, if we use &lt;code&gt;opt_einsum&lt;/code&gt; combined with &lt;code&gt;CUDA&lt;/code&gt;, we can speed up the tensor contraction as many as &lt;span class="math"&gt;\(10^{5}\)&lt;/span&gt; times in comparison with the naive &lt;code&gt;tensordot&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CUDA&lt;/code&gt; can further speed up about as many as $10^{2}$ times.
+It reaches the threshold at about $\chi\simeq 250$, below which we think that the cores in GPU are not fully implemented.
+Overall, if we use &lt;code&gt;opt_einsum&lt;/code&gt; combined with &lt;code&gt;CUDA&lt;/code&gt;, we can speed up the tensor contraction as many as $10^{5}$ times in comparison with the naive &lt;code&gt;tensordot&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
@@ -399,66 +254,4 @@ Overall, if we use &lt;code&gt;opt_einsum&lt;/code&gt; combined with &lt;code&gt
 &lt;p&gt;&lt;a href="https://joss.theoj.org/papers/10.21105/joss.00753"&gt;Smith et al., (2018). opt_einsum - A Python package for optimizing contraction order for einsum-like expressions . Journal of Open Source Software, 3(26), 753.&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:opt_sum" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="PHYSICS"></category><category term="tensor network"></category></entry></feed>
+&lt;/div&gt;</content><category term="PHYSICS"></category><category term="tensor network"></category></entry></feed>
