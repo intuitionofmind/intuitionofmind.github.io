@@ -5,42 +5,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2022-03-11T16:27:09-00:00</lastmod>
+<lastmod>2024-08-12T22:39:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2022-03-11T16:27:09-00:00</lastmod>
+<lastmod>2024-08-12T22:39:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2022-03-11T16:27:09-00:00</lastmod>
+<lastmod>2024-08-12T22:39:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2022-03-11T16:27:09-00:00</lastmod>
+<lastmod>2024-08-12T22:39:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2022-03-11T16:27:09-00:00</lastmod>
+<lastmod>2024-08-12T22:39:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/info.html</loc>
-<lastmod>2022-03-11T16:27:09-00:00</lastmod>
+<lastmod>2024-08-12T22:39:20-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/du-zou-chu-wei-yi-zhen-li-guan.html</loc>
+<lastmod>2024-08-12T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/wo-de-fu-qin.html</loc>
+<lastmod>2022-11-28T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/ai-yin-si-tan-he-wai-er-jiu-yi-ge-yuan-wu-li-wen-ti-de-liang-feng-tong-xin-1922.html</loc>
+<lastmod>2022-06-09T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -166,14 +187,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/blog-chinese.html</loc>
-<lastmod>2019-11-28T00:00:00+08:06</lastmod>
+<lastmod>2024-08-12T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/misc.html</loc>
-<lastmod>2022-03-10T00:00:00+08:06</lastmod>
+<lastmod>2022-06-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -187,7 +208,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/philosophy.html</loc>
-<lastmod>2022-03-10T00:00:00+08:06</lastmod>
+<lastmod>2024-08-12T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/essay.html</loc>
+<lastmod>2022-11-28T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -195,13 +223,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/tensor-network.html</loc>
 <lastmod>2021-11-22T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/essay.html</loc>
-<lastmod>2019-11-28T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -236,14 +257,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/hermann-weyl.html</loc>
-<lastmod>2022-03-10T00:00:00+08:06</lastmod>
+<lastmod>2022-06-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/wayne-zheng.html</loc>
-<lastmod>2021-11-22T00:00:00+08:06</lastmod>
+<lastmod>2024-08-12T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
