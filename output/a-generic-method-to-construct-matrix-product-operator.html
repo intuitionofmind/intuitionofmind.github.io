@@ -121,6 +121,7 @@
 
 
 						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2024/08/index.html">August 2024 (1)</a></li>
 									<li><a href="/posts/2022/11/index.html">November 2022 (1)</a></li>
 									<li><a href="/posts/2022/06/index.html">June 2022 (1)</a></li>
 									<li><a href="/posts/2022/03/index.html">March 2022 (1)</a></li>
@@ -197,86 +198,77 @@
 	<h6>written by <a href="/author/wayne-zheng.html">Wayne Zheng</a>   Cat: <a href="/category/physics.html">PHYSICS</a>  Date: Thu, Sep 16 2021. Tags: <a href="/tag/tensor-network.html">tensor network</a>, </h6>
 	<h1>Preliminary</h1>
 <h2>From a many-body operator (MBO) to a matrix product operator (MPO)</h2>
-<p>We are talking about quantum many-body models on a lattice <span class="math">\(\Lambda\)</span>.
-A lattice <span class="math">\(\Lambda\)</span> is a graph consisting of <span class="math">\(|\Lambda|\)</span> sites, which are always labeled in a one-dimensional array <span class="math">\(\left\{0, \dots, |\Lambda|-1\right\}\)</span> in a specific way in the first place.
+<p>We are talking about quantum many-body models on a lattice $\Lambda$.
+A lattice $\Lambda$ is a graph consisting of $|\Lambda|$ sites, which are always labeled in a one-dimensional array $\left{0, \dots, |\Lambda|-1\right}$ in a specific way in the first place.
 At each site, there is a local single-body Hilbert space. 
 A quantum many-body Hilbert space is defined as the <em>tensor product</em> of the local Hilbert spaces at each site.
 MBOs, such as various terms in the Hamiltonian of a quantum model or any kinds of observables, are also the tensor product of all the local operators.
 Note that we always simplify a MBO as it looks just like a single-body operator (SBO) when we write down some many-body quantum models, which, however, might lead to some misleading.
 For examples,
-</p>
-<div class="math">$$
+$$
 \begin{equation}
     O_{j}\equiv\mathbb{1}\otimes\cdots{\mathop{o}\limits_{j}}\cdots\otimes\mathbb{1}, \quad O_{i}\cdot O_{j}\equiv\mathbb{1}\otimes\cdots{\mathop{o}\limits_{i}}\cdots{\mathop{o}\limits_{j}}\cdots\otimes\mathbb{1}
 \end{equation}
-$$</div>
-<p>
-for <span class="math">\(i, j=0, \cdots, |\Lambda|-1\)</span>.
+$$
+for $i, j=0, \cdots, |\Lambda|-1$.
 The upper-case letters denote MBOs while the lower-case letters denote SBOs.
-<span class="math">\(O_{j}\)</span> means that this MBO merely operates on site <span class="math">\(j\)</span> nontrivially while trivially on other sites.
+$O_{j}$ means that this MBO merely operates on site $j$ nontrivially while trivially on other sites.
 MPO is the idea to encode this tensor product structure of a MBO into the matrix product form of local operators.
 Formally,
-</p>
-<div class="math">$$
+$$
 \begin{equation}
-    O=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{N}}^{j_{N-1}^{\prime}j_{N-1}}|\{j^{\prime}\}\rangle\langle\{j\}|.
+    O=W_{\gamma_{0}\gamma_{1}}^{j_{0}^{\prime}j_{0}}W_{\gamma_{1}\gamma_{2}}^{j_{1}^{\prime}j_{1}}\cdots W_{\gamma_{N-1}\gamma_{N}}^{j_{N-1}^{\prime}j_{N-1}}|{j^{\prime}}\rangle\langle{j}|.
 \end{equation}
-$$</div>
-<p>
-<span class="math">\(\gamma_{0, N}\)</span> are only one-dimensional virtual indices.
-The dimension of other internal virtual indices <span class="math">\(\gamma\)</span>s depends on some technical details, which we will talk later.</p>
+$$
+$\gamma_{0, N}$ are only one-dimensional virtual indices.
+The dimension of other internal virtual indices $\gamma$s depends on some technical details, which we will talk later.</p>
 <h2>Lattice topology</h2>
-<p>Given an arbitrary quantum many-body Hamiltonian <span class="math">\(H=\sum_{j}h_{j}\)</span> and a lattice <span class="math">\(\Lambda\)</span>, we can define a topological space based on <span class="math">\(\Lambda\)</span> as <span class="math">\((\Lambda, \mathcal{T})\)</span>.
-<span class="math">\(\mathcal{T}\)</span> is the set consisting of several subsets of <span class="math">\(\Lambda\)</span>. <span class="math">\(\forall~\omega_{j}\subset\Lambda\)</span> and <span class="math">\(\omega_{j}\in\mathcal{T}\)</span> includes all sites on which a term <span class="math">\(h_{j}\)</span> in the Hamiltonian operates nontrivially.</p>
+<p>Given an arbitrary quantum many-body Hamiltonian $H=\sum_{j}h_{j}$ and a lattice $\Lambda$, we can define a topological space based on $\Lambda$ as $(\Lambda, \mathcal{T})$.
+$\mathcal{T}$ is the set consisting of several subsets of $\Lambda$. $\forall~\omega_{j}\subset\Lambda$ and $\omega_{j}\in\mathcal{T}$ includes all sites on which a term $h_{j}$ in the Hamiltonian operates nontrivially.</p>
 <h1>Lower-triangular matrix construction</h1>
 <p>Practically we can accomplish this goal in a lower triangular matrix form<sup id="fnref:McCulloch"><a class="footnote-ref" href="#fn:McCulloch">1</a></sup>.
-Assume the dimension of the MPO frame is <span class="math">\(D\)</span>.
-Without loss of generality, the <span class="math">\(W_{0, 0}\equiv\mathbb{1}\)</span> and <span class="math">\(W_{D-1, D-1}=\mathbb{1}\)</span> are set as the identity operators.
+Assume the dimension of the MPO frame is $D$.
+Without loss of generality, the $W_{0, 0}\equiv\mathbb{1}$ and $W_{D-1, D-1}=\mathbb{1}$ are set as the identity operators.
 For the onsite term we have,
-</p>
-<div class="math">$$
+$$
 \begin{equation}
     W_{1}=
     \begin{pmatrix}
-        \mathbb{1} &amp; 0 \\
+        \mathbb{1} &amp; 0 \
         X &amp; \mathbb{1}
     \end{pmatrix}.
 \end{equation}
-$$</div>
+$$</p>
 <h2>Two-body operator</h2>
-<p>For the nearest-neighbor two-body interactions <span class="math">\(\sum_{j}X_{j}Y_{j+1}\)</span>, we have
-</p>
-<div class="math">$$
+<p>For the nearest-neighbor two-body interactions $\sum_{j}X_{j}Y_{j+1}$, we have
+$$
 \begin{equation}
     W_{2}=
     \begin{pmatrix}
-        \mathbb{1} &amp; 0 &amp; 0 \\
-        Y &amp; 0 &amp; 0 \\
+        \mathbb{1} &amp; 0 &amp; 0 \
+        Y &amp; 0 &amp; 0 \
         0 &amp; X &amp; \mathbb{1}
     \end{pmatrix}.
 \end{equation}
-$$</div>
-<p>
-How about arbitrary long-range interactions such as <span class="math">\(\sum_{i, j}X_{i}Y_{j}\)</span>?
-For the MPOs on site-<span class="math">\(i, j\)</span>, they look like <span class="math">\(W_{2}\)</span>.
-Furthermore, the corresponding diagonal matrix elements of the MPOs between site-<span class="math">\(i\)</span> and -<span class="math">\(j\)</span> should have identity <span class="math">\(\mathbb{1}\)</span>.
-Firstly let us assume on each bond there are at most <span class="math">\(N_{\text{op}}\)</span> terms.
-<span class="math">\(d=j-i\)</span>.
-For the full Hamiltonian <span class="math">\(H=\sum_{k}h_{k}\)</span>, which may consists various <span class="math">\(d_{n}\)</span> ranges of interactions, we only need to encode different ranges of interacting terms into different blocks of the MPO.
+$$
+How about arbitrary long-range interactions such as $\sum_{i, j}X_{i}Y_{j}$?
+For the MPOs on site-$i, j$, they look like $W_{2}$.
+Furthermore, the corresponding diagonal matrix elements of the MPOs between site-$i$ and -$j$ should have identity $\mathbb{1}$.
+Firstly let us assume on each bond there are at most $N_{\text{op}}$ terms.
+$d=j-i$.
+For the full Hamiltonian $H=\sum_{k}h_{k}$, which may consists various $d_{n}$ ranges of interactions, we only need to encode different ranges of interacting terms into different blocks of the MPO.
 In this sense, the dimension of the MPO frame turns out to be
-</p>
-<div class="math">$$
+$$
 \begin{equation}
-    D=2+\sum_{n}d_{n}\cdot{N}_{\text{op}}.
+    D=2+\sum_{n}d_{n}\cdot{N}<em n>{\text{op}}.
 \end{equation}
-$$</div>
-<p>
+$$
 That is, longer-range interactions require larger MPO, of which dimension increases polynomially.
-Given a specific <span class="math">\(d_{n}\)</span>, the dimension of this very block is <span class="math">\(d_{n}N_{\text{op}}\)</span>.
-Within this block, the operators also should be place into sub-blocks with the dimension <span class="math">\(N_{\text{op}}\)</span> to avoid unwanted other possible overlaps.
-Practically, the all the bonds in the subset <span class="math">\(\{\omega_{j}^{(n)}\}\subset\mathcal{T}\)</span> with all the same <span class="math">\(d_{n}\)</span> can be placed in a increasing order in terms of the head site labels.</p>
-<h2><span class="math">\(N\)</span>-body operator</h2>
-<p>For arbitrary <span class="math">\(N\)</span>-body operators such as strings or loops, it is quite similar as the two-body operator with long-range interactions.
+Given a specific $d</em>$.
+Within this block, the operators also should be place into sub-blocks with the dimension $N_{\text{op}}$ to avoid unwanted other possible overlaps.
+Practically, the all the bonds in the subset ${\omega_{j}^{(n)}}\subset\mathcal{T}$ with all the same $d_{n}$ can be placed in a increasing order in terms of the head site labels.}$, the dimension of this very block is $d_{n}N_{\text{op}</p>
+<h2>$N$-body operator</h2>
+<p>For arbitrary $N$-body operators such as strings or loops, it is quite similar as the two-body operator with long-range interactions.
 The diagonal elements of the MPOs on the sites between the head and tail are inserted with the corresponding operators instead of identity operators.</p>
 <p>The original notebook and code can be found <a href="https://gitlab.com/waynezheng/public_notes/-/tree/main/sympy_long-range_mpon">here</a>.</p>
 <div class="footnote">
@@ -287,68 +279,6 @@ The diagonal elements of the MPOs on the sites between the head and tail are ins
 </li>
 </ol>
 </div>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 </article, /style>
 
 <hr/>
@@ -378,19 +308,20 @@ The diagonal elements of the MPOs on the sites between the head and tail are ins
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/philosophy.html" class="tag-0">philosophy</a></li>
-									<li><a href="/tag/science.html" class="tag-4">science</a></li>
-									<li><a href="/tag/essay.html" class="tag-0">essay</a></li>
-									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
-									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 									<li><a href="/tag/cycling.html" class="tag-2">cycling</a></li>
+									<li><a href="/tag/essay.html" class="tag-1">essay</a></li>
+									<li><a href="/tag/science.html" class="tag-4">science</a></li>
+									<li><a href="/tag/literature.html" class="tag-1">literature</a></li>
+									<li><a href="/tag/philosophy.html" class="tag-1">philosophy</a></li>
 									<li><a href="/tag/tensor-network.html" class="tag-2">tensor network</a></li>
+									<li><a href="/tag/training.html" class="tag-4">training</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
+											<li><a href="/posts/2024/08/index.html">August 2024 (1)</a></li>
 											<li><a href="/posts/2022/11/index.html">November 2022 (1)</a></li>
 											<li><a href="/posts/2022/06/index.html">June 2022 (1)</a></li>
 											<li><a href="/posts/2022/03/index.html">March 2022 (1)</a></li>
