@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from pelican.plugins import tag_cloud, render_math, sitemap
 
 AUTHOR = 'Wayne Zheng'
 SITENAME = "Wayne Zheng's HOMEPAGE"
@@ -34,8 +35,7 @@ AUTHOR_FEED_RSS = None
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 
 # plugins
-PLUGIN_PATHS = ['./pelican-plugins/']
-PLUGINS = ['tag_cloud', 'render_math', 'sitemap', 'autopages']
+PLUGINS = ['tag_cloud', 'render_math', 'sitemap']
 
 TAG_CLOUD_SORTING = 'random'
 TAG_CLOUD_BADGE = True
