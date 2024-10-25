@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,91 +34,98 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/hermann-weyl.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/wayne-zheng.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/wayne-zheng2.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/wayne-zheng3.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/wayne-zheng4.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/blog-chinese.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/blog-chinese2.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/blog-chinese3.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/category/blog-chinese4.html</loc>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/misc.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/physics.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -173,6 +180,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/du-ya-li-shi-duo-de-xing-er-shang-xue-yi-zi-ran-zhe-xue-de-fa-duan-yi-ji-zai-lun-ge-wu-yu-qiu-zhi.html</loc>
+<lastmod>2024-10-24T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/du-zou-chu-wei-yi-zhen-li-guan.html</loc>
 <lastmod>2024-08-12T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -209,21 +223,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index2.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/index3.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/index4.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/index5.html</loc>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -237,217 +258,224 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/pages/info.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2011/01/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2012/07/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2012/11/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2013/07/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2013/09/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2015/06/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2017/01/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2017/02/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2017/10/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2018/01/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2018/03/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2018/04/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2019/11/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2020/05/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2021/09/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2021/11/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2022/03/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2022/06/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2022/11/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/posts/2024/08/</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/posts/2024/10/</loc>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/cycling.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/essay.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/essay2.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/literature.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/philosophy.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/philosophy2.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/science.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/tensor-network.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/training.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2024-08-15T15:38:24-00:00</lastmod>
+<lastmod>2024-10-25T17:06:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
